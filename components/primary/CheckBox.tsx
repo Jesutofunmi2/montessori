@@ -26,7 +26,7 @@ export const CheckBox = ({
         {!roundBorder ? (
           <MaterialIcons
             size={20}
-            color={error && !selected ? 'tomato' : colors.secondaryBgGreen}
+            color={error && !selected ? 'tomato' : colors.green500}
             name={selected ? 'check-box' : 'check-box-outline-blank'}
           />
         ) : (
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   roundCheckBodyBackground: {
-    backgroundColor: colors.secondaryBg,
-    borderColor: colors.secondaryBg,
+    backgroundColor: colors.purple500,
+    borderColor: colors.green500,
   },
 });

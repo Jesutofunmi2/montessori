@@ -33,7 +33,7 @@ export const Button = memo(
   ({
     title,
     outlined,
-    loaderColor = colors.secondaryBg,
+    loaderColor = colors.green500,
     disabled,
     // color,
     isLoading = false,
@@ -53,7 +53,7 @@ export const Button = memo(
           style={[
             outlined ? styles.btnOutlined : styles.btn,
             globalStyles.rowCenter,
-            { borderColor: isDanger ? 'red' : colors.secondaryBg, opacity: disabled ? 0.5 : 1 },
+            { borderColor: isDanger ? 'red' : colors.green500, opacity: disabled ? 0.5 : 1 },
             style,
           ]}
           {...rest}>
@@ -61,9 +61,8 @@ export const Button = memo(
             {iconLeft ? <View style={[styles.iconLeft, iconLeftStyle]}>{iconLeft}</View> : null}
             <Text
               text={title}
-              color={outlined ? colors.secondaryBg : colors.primaryBg}
-              fontWeight="600"
-              fontFamily="DMSans-Medium"
+              color={outlined ? colors.green500 : colors.green500}
+              fontFamily="Fredoka-Medium"
               fontSize={16}
               style={[textStyle, isDanger && { color: 'red' }]}
             />
@@ -88,14 +87,14 @@ const styles = StyleSheet.create({
   btn: {
     borderRadius: layout.heightPixel(8),
     height: layout.heightPixel(60),
-    backgroundColor: colors.secondaryBg,
+    backgroundColor: colors.green500,
   },
   btnOutlined: {
     borderRadius: layout.heightPixel(8),
     height: layout.heightPixel(60),
     backgroundColor: 'transparent',
     borderWidth: 1,
-    borderColor: colors.primaryBg,
+    borderColor: colors.green500,
   },
   iconLeft: {
     marginRight: layout.pixelSizeHorizontal(8),

@@ -66,9 +66,9 @@ export const Input = memo(
         {label ? (
           <BaseText style={[{ paddingBottom: layout.pixelSizeVertical(10) }, labelStyle]}>
             {required ? (
-              <Text text="* " fontFamily="DMSans-Medium" color={colors.error} fontSize={16} />
+              <Text text="* " fontFamily="Fredoka-Medium" color={colors.green500} fontSize={16} />
             ) : null}
-            <Text text={label} color={colors.primaryColorDark} fontSize={16} style={styles.label} />
+            <Text text={label} color={colors.green500} fontSize={16} style={styles.label} />
           </BaseText>
         ) : null}
         <View
@@ -92,13 +92,13 @@ export const Input = memo(
                 text={countryCode || '+234  '}
                 fontSize={16}
                 textAlign="center"
-                color={colors.secondaryBg}
+                color={colors.green500}
               />
               {iconLeft}
             </View>
           ) : null}
           <TextInput
-            placeholderTextColor={colors.grey_100}
+            placeholderTextColor={colors.green500}
             secureTextEntry={secureTextEntry}
             autoCapitalize="none"
             autoCorrect={false}
@@ -120,7 +120,7 @@ export const Input = memo(
           />
           {isLoading ? (
             <View style={{ marginLeft: layout.pixelSizeHorizontal(10) }}>
-              <ActivityIndicator size="small" color={colors.secondaryBg} />
+              <ActivityIndicator size="small" color={colors.green500} />
             </View>
           ) : null}
           {isPassword && !isLoading ? (
@@ -131,7 +131,7 @@ export const Input = memo(
               <Ionicons
                 name={secureTextEntry ? 'eye-outline' : 'eye-off-outline'}
                 size={20}
-                color={colors.green_100}
+                color={colors.green500}
               />
             </TouchableOpacity>
           ) : (
@@ -151,8 +151,7 @@ export const Input = memo(
         {!error && info && (
           <Text
             text={info}
-            color={colors.primaryColorDark}
-            fontWeight="500"
+            color={colors.green500}
             fontSize={14}
             style={[styles.info, infoStyle]}
           />
@@ -176,10 +175,10 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 4,
     fontSize: layout.fontPixel(16),
-    color: colors.primaryColorLight,
+    color: colors.green500,
     fontWeight: '400',
     fontFamily: 'DMSans-Regular',
-    borderColor: colors.grey_100,
+    borderColor: colors.green500,
   },
   label: {
     paddingBottom: layout.pixelSizeVertical(10),

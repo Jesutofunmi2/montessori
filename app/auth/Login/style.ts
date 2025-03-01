@@ -2,12 +2,12 @@ import { StyleSheet } from 'react-native';
 import { colors, layout } from '../../../constants';
 import { globalStyles } from '../../../assets/globalStyles';
 
-export const styles = StyleSheet.create({
+ const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: colors.secondaryBg,
+    backgroundColor: colors.purple500,
   },
   container: {
-    backgroundColor: colors.primaryBg,
+    backgroundColor: colors.green500,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -40,3 +40,5 @@ export const styles = StyleSheet.create({
     width: 350,
   },
 });
+
+export default styles;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, Input, KeyboardAwareScrollView, Button, ProgressiveBar } from '../../../components/primary';
 import { colors } from '../../../constants';
 import { View, Text as BaseText, SafeAreaView } from 'react-native';
-import { styles } from './style';
+import styles  from './style';
 import { globalStyles } from '../../../assets/globalStyles';
 import { usePlatform } from '../../../hooks';
 
@@ -31,22 +31,12 @@ export const Login = () => {
               <Text
                 text="Don't have an account?"
                 textAlign="center"
-                color={colors.primaryColorLight}
+                color={colors.green500}
               />{' '}
-              <Text text="Sign up" textAlign="center" color={colors.secondaryBg} />
+              <Text text="Sign up" textAlign="center" color={colors.purple500} />
               <ProgressiveBar progress={50} />
             </BaseText>
           </View>
-          <View style={styles.btnWrapper}>
-                      {/* <Button
-                        title="Continue"
-                        //onPress={() => handleSubmit()}
-                        //isLoading={isLoading}
-                        //disabled={isLoading}
-                        //loaderColor={colors.white}
-                      /> */}
-                     
-                    </View>
         </KeyboardAwareScrollView>
       </View>
     </SafeAreaView>

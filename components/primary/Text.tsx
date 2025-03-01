@@ -2,35 +2,24 @@ import React, { memo, useMemo } from 'react';
 import { ColorValue, StyleProp, Text as BaseText, TextStyle } from 'react-native';
 import { colors, layout } from '../../constants';
 
+type FontVariants = 'Fredoka-Bold' | 'Fredoka-Regular' | 'Fredoka-Medium';
+
 type TextProps = BaseText['props'] & {
   text: string;
   color?: ColorValue;
   textAlign?: 'center' | 'left' | 'right' | 'justify' | 'auto';
   fontSize?: number;
-  fontFamily?: 'DMSans-Bold' | 'DMSans-Regular' | 'DMSans-Medium';
-  fontWeight?:
-    | 'normal'
-    | 'bold'
-    | '100'
-    | '200'
-    | '300'
-    | '400'
-    | '500'
-    | '600'
-    | '700'
-    | '800'
-    | '900';
+  fontFamily?: FontVariants;
   style?: StyleProp<TextStyle>;
 };
 
 export const Text = memo(
   ({
     text,
-    color = colors.primaryColorDark,
+    color = colors.white,
     textAlign = 'left',
     fontSize = 16,
-    fontWeight = '400',
-    fontFamily = 'DMSans-Regular',
+    fontFamily = 'Fredoka-Bold',
     style,
     ...rest
   }: TextProps) => {
@@ -39,10 +28,9 @@ export const Text = memo(
         color,
         textAlign,
         fontSize: layout.fontPixel(fontSize),
-        fontWeight,
         fontFamily,
       }),
-      [color, textAlign, fontSize, fontWeight, fontFamily],
+      [color, textAlign, fontSize, fontFamily],
     );
 
     return (

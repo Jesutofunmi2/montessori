@@ -19,14 +19,13 @@ export const Header = ({ title, topTitle = '', bottomTitle = '', onPress }: Head
         <SVGIcon name="backBtn" />
       </TouchableOpacity>
       <View style={[styles.txtContainer]}>
-        <Text text={topTitle} fontWeight="400" fontSize={16} color={colors.grey_100} />
-        <Text text={title} fontWeight="500" fontSize={24} />
+        <Text text={topTitle} fontSize={16} color={colors.green500} />
+        <Text text={title} fontSize={24} />
         <View style={{ width: 250 }}>
           <Text
             text={bottomTitle}
-            fontWeight="400"
             fontSize={14}
-            color={colors.primaryColorLight}
+            color={colors.green500}
           />
         </View>
       </View>

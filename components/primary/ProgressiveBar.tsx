@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     borderRadius: layout.heightPixel(38),
     height: layout.heightPixel(30),
     width: layout.widthPixel(380),
-    backgroundColor: colors.secondaryBgGreen,
+    backgroundColor: colors.green500,
     borderColor: colors.white,
     borderWidth: layout.heightPixel(1), 
     overflow: "hidden",
@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
   childContainer: {
     borderRadius: layout.heightPixel(38),
     height: layout.heightPixel(30),
-    backgroundColor: colors.secondaryBg,
+    backgroundColor: colors.green500,
   },
 });
