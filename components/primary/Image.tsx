@@ -1,11 +1,10 @@
 import React, { ComponentProps, memo } from 'react';
+import { Image as RNImage } from 'react-native';
 
-import FastImage from 'react-native-fast-image';
-
-type ImageProps = ComponentProps<typeof FastImage> & {
+type ImageProps = ComponentProps<typeof RNImage> & {
   source?: object | number;
 };
 
 export const Image = memo(({ source, ...rest }: ImageProps) => {
-  return <FastImage source={source} {...rest} />;
+  return <RNImage source={source} {...rest} />;
 });

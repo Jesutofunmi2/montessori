@@ -1,17 +1,25 @@
-import { Stack } from "expo-router";
-import { ThemeProvider } from "@react-navigation/native";
-import { DarkTheme, DefaultTheme } from "@react-navigation/native";
-import { useColorScheme } from "react-native";
 import React from "react";
+import { Stack, useRouter, useSegments } from "expo-router";
+import { useEffect } from "react";
+import { SplashScreen } from "expo-router";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+  useEffect(() => {
+    SplashScreen.hideAsync();
+  }, []);
+  const router = useRouter();
+  const segments = useSegments();
+ 
+  useEffect(() => {
+    if (segments[0] === undefined) {
+      //router.replace("/auth/OnBoarding");
+    }
+  }, [segments]);
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen
           name="index"
-          options={{ headerShown: false }}
+          options={{ headerShown: false, title: "Auth" }}
         />
 
         <Stack.Screen
@@ -19,6 +27,5 @@ export default function RootLayout() {
           options={{ headerShown: false }}
         />
       </Stack>
-    </ThemeProvider>
   );
 }

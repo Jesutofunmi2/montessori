@@ -1,6 +1,5 @@
-export * from "./Input";
-export * from "./Text";
-export * from './KeyboardAwareScrollView';
+export * from './Input';
+export * from './Text';
 export * from './SVGIcon';
 export * from './Button';
 export * from './Image';
@@ -9,3 +8,4 @@ export * from './SafeAreaView';
 export * from './Header';
 export * from './CheckBox';
 export * from './ProgressiveBar';
+export * from './OnBoardingCard'

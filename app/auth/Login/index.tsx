@@ -1,22 +1,16 @@
 import React from 'react';
-import { Text, Input, KeyboardAwareScrollView, Button, ProgressiveBar } from '../../../components/primary';
+import { Text, Input, ProgressiveBar } from '../../../components/primary';
 import { colors } from '../../../constants';
 import { View, Text as BaseText, SafeAreaView } from 'react-native';
 import styles  from './style';
 import { globalStyles } from '../../../assets/globalStyles';
 import { usePlatform } from '../../../hooks';
 
-export const Login = () => {
+ const Login = () => {
     const { isIOS } = usePlatform();
   return (
     <SafeAreaView style={[globalStyles.wrapper, styles.wrapper]}>
       <View style={[styles.body, globalStyles.body]}>
-        <KeyboardAwareScrollView
-          style={styles.form}
-          enableOnAndroid
-          enableAutomaticScroll={isIOS}
-          keyboardShouldPersistTaps="handled"
-          keyboardDismissMode="interactive">
           <Input
             label="Email Address / Username"
             value={""}
@@ -37,7 +31,6 @@ export const Login = () => {
               <ProgressiveBar progress={50} />
             </BaseText>
           </View>
-        </KeyboardAwareScrollView>
       </View>
     </SafeAreaView>
   );
