@@ -1,31 +1,31 @@
 import React from "react";
-import { Stack, useRouter, useSegments } from "expo-router";
-import { useEffect } from "react";
-import { SplashScreen } from "expo-router";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import OnBoarding from "./auth/OnBoarding";
+import Login from "./auth/Login";
+import SplashScreen from "./auth/SplashScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function RootLayout() {
-  useEffect(() => {
-    SplashScreen.hideAsync();
-  }, []);
-  const router = useRouter();
-  const segments = useSegments();
- 
-  useEffect(() => {
-    if (segments[0] === undefined) {
-      //router.replace("/auth/OnBoarding");
-    }
-  }, [segments]);
   return (
-      <Stack>
+      <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{ headerShown: false}}>
         <Stack.Screen
-          name="index"
-          options={{ headerShown: false, title: "Auth" }}
+          name="SplashScreen"
+          options={{ headerShown: false, title: "SplashScreen" }}
+          component={SplashScreen}
         />
 
         <Stack.Screen
-          name="auth/Login/index"
-          options={{ headerShown: false }}
+          name="OnBoarding"
+          options={{ headerShown: false, title: "OnBoarding" }}
+          component={OnBoarding}
         />
-      </Stack>
+
+        <Stack.Screen
+          name="Login"
+          options={{ headerShown: false, title: "Login" }}
+          component={Login}
+        />
+      </Stack.Navigator>
   );
 }
