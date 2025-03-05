@@ -6,22 +6,30 @@ import { View, StyleSheet, Image } from "react-native";
 const GetStarted = () => {
   return (
     <View style={styles.container}>
-      {/* Image & Text Section */}
+
       <View style={styles.imageContainer}>
         <Image
           source={require("../../../assets/images/block.png")}
           style={styles.image}
         />
-        <Text
-          text={"Nurture House Montessori"}
-          color={colors.black}
-          fontSize={30}
-          fontFamily="Fredoka_700Bold"
-          textAlign="center"
-        />
+        <View style={styles.titleContainer}>
+          <Text
+            text={"Nurture House Montessori"}
+            color={colors.black}
+            fontSize={30}
+            fontFamily="Fredoka_700Bold"
+            textAlign="center"
+          />
+          <Text
+            text="Learn to read for free"
+            color={colors.gray500}
+            fontSize={20}
+            textAlign="center"
+            fontFamily="Fredoka_400Regular"
+          />
+        </View>
       </View>
 
-      {/* Button Section */}
       <View style={styles.buttonContainer}>
         <Button title={"SIGN IN WITH EMAIL"} />
         <Button title={"GET STARTED"} outlined={true} />
@@ -49,6 +57,9 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     gap: 20,
+  },
+  titleContainer: {
+    gap: 12,
   },
 });
 
