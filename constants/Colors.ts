@@ -53,4 +53,7 @@ export default {
   purple500: "#A755F6",
   red500: "#EE4444",
   white: "#FFFFFF",
+  black: "#0F172A",
+  gray300: "#D0D4DA",
+  gray500: "#64748A",
 };

@@ -23,7 +23,7 @@ const SplashScreen = () => {
         text={"Nurture House Montessori"}
         color={colors.white}
         fontSize={48}
-        fontFamily="Fredoka-Bold"
+        fontFamily="Fredoka_700Bold"
         textAlign="center"
       />
     </View>

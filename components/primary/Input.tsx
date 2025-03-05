@@ -66,7 +66,7 @@ export const Input = memo(
         {label ? (
           <BaseText style={[{ paddingBottom: layout.pixelSizeVertical(10) }, labelStyle]}>
             {required ? (
-              <Text text="* " fontFamily="Fredoka-Medium" color={colors.green500} fontSize={16} />
+              <Text text="* " fontFamily="Fredoka_500Medium" color={colors.green500} fontSize={16} />
             ) : null}
             <Text text={label} color={colors.green500} fontSize={16} style={styles.label} />
           </BaseText>

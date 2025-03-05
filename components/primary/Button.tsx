@@ -53,7 +53,7 @@ export const Button = memo(
           style={[
             outlined ? styles.btnOutlined : styles.btn,
             globalStyles.rowCenter,
-            { borderColor: isDanger ? 'red' : colors.green500, opacity: disabled ? 0.5 : 1 },
+            { borderColor: isDanger ? 'red' : colors.gray300, opacity: disabled ? 0.5 : 1 },
             style,
           ]}
           {...rest}>
@@ -61,9 +61,9 @@ export const Button = memo(
             {iconLeft ? <View style={[styles.iconLeft, iconLeftStyle]}>{iconLeft}</View> : null}
             <Text
               text={title}
-              color={outlined ? colors.green500 : colors.green500}
-              fontFamily="Fredoka-Medium"
-              fontSize={16}
+              color={outlined ? colors.green500 : colors.white}
+              fontFamily="Fredoka_500Medium"
+              fontSize={18}
               style={[textStyle, isDanger && { color: 'red' }]}
             />
             {isLoading ? (
@@ -87,14 +87,29 @@ const styles = StyleSheet.create({
   btn: {
     borderRadius: layout.heightPixel(8),
     height: layout.heightPixel(60),
+    width: layout.widthPixel(380),
     backgroundColor: colors.green500,
+    elevation: 6,
+
+    shadowColor: "#000",
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    borderBottomWidth: 4,
+    borderBottomColor: colors.green500, 
   },
   btnOutlined: {
     borderRadius: layout.heightPixel(8),
     height: layout.heightPixel(60),
+    width: layout.widthPixel(380),
     backgroundColor: 'transparent',
     borderWidth: 1,
-    borderColor: colors.green500,
+    borderColor: colors.gray300,
+    shadowColor: "#000",
+    shadowOffset: { width: 2, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 4,
   },
   iconLeft: {
     marginRight: layout.pixelSizeHorizontal(8),

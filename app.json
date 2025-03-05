@@ -10,14 +10,14 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.upnepa.MobileApp",
+      "bundleIdentifier": "com.montesori.MobileApp",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-        "package": "com.montesori.mobileapp",
-        "versionCode": 1,
+      "package": "com.montesori.mobileapp",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -38,6 +38,9 @@
       "eas": {
         "projectId": "6b05ec6a-effe-46c8-ae42-94d5fdfdb0cd"
       }
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

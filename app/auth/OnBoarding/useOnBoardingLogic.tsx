@@ -19,7 +19,7 @@ const useOnBoardingLogic = () => {
       }
     };
     const handleSkip = () => {
-      navigation.navigate("Login");
+      navigation.navigate("GetStarted");
     };
     return {
         handleSkip,

@@ -38,7 +38,7 @@ const OnBoarding = () => {
           text={item.title}
           color={colors.white}
           fontSize={38}
-          fontFamily="Fredoka-Medium"
+          fontFamily="Fredoka_500Medium"
           textAlign="center"
         />
       </View>
