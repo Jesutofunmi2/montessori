@@ -2,11 +2,12 @@ import { colors } from "@/constants";
 import React from "react";
 import { Button, Text } from "@/components";
 import { View, StyleSheet, Image } from "react-native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 const GetStarted = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <View style={styles.container}>
-
       <View style={styles.imageContainer}>
         <Image
           source={require("../../../assets/images/block.png")}
@@ -16,7 +17,7 @@ const GetStarted = () => {
           <Text
             text={"Nurture House Montessori"}
             color={colors.black}
-            fontSize={30}
+            fontSize={28}
             fontFamily="Fredoka_700Bold"
             textAlign="center"
           />
@@ -31,7 +32,12 @@ const GetStarted = () => {
       </View>
 
       <View style={styles.buttonContainer}>
-        <Button title={"SIGN IN WITH EMAIL"} />
+        <Button
+          title={"SIGN IN WITH EMAIL"}
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
+        />
         <Button title={"GET STARTED"} outlined={true} />
       </View>
     </View>

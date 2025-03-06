@@ -56,4 +56,5 @@ export default {
   black: "#0F172A",
   gray300: "#D0D4DA",
   gray500: "#64748A",
+  deepBlack: "#0F172A",
 };

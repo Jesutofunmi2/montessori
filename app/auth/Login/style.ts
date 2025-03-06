@@ -4,7 +4,7 @@ import { globalStyles } from '../../../assets/globalStyles';
 
  const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: colors.purple500,
+    backgroundColor: colors.white,
   },
   container: {
     backgroundColor: colors.green500,
@@ -23,6 +23,10 @@ import { globalStyles } from '../../../assets/globalStyles';
     fontSize: 24,
   },
   headerContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 15,
     paddingHorizontal: globalStyles.container.paddingHorizontal,
   },
   footerText: {
@@ -38,6 +42,10 @@ import { globalStyles } from '../../../assets/globalStyles';
   },
   btnWrapper: {
     width: 350,
+  },
+  textContainer: {
+    flex: 1,
+    alignItems: "center",
   },
 });
 

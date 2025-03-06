@@ -9,7 +9,7 @@ export const searchHeight = layout.heightPixel(50);
 const width = Dimensions.get('screen').width;
 
 export const globalStyles = StyleSheet.create({
-  wrapper: { flex: 1, backgroundColor: colors.primaryBg },
+  wrapper: { flex: 1, backgroundColor: colors.gray300 },
   container: {
     paddingHorizontal: HORIZONTAL_PADDING,
     flexGrow: 1,
@@ -57,7 +57,7 @@ export const globalStyles = StyleSheet.create({
     borderWidth: 0.8,
     padding: 16,
     paddingVertical: 12,
-    borderColor: colors.grey_100,
+    borderColor: colors.gray500,
     flexDirection: 'row',
     alignItems: 'center',
     shadowColor: '#999',
@@ -110,7 +110,7 @@ export const globalStyles = StyleSheet.create({
     fontWeight: '400',
   },
   dropdownExtra: {
-    backgroundColor: colors.secondaryBgLight,
+    backgroundColor: colors.gray300,
     borderWidth: 0,
   },
   footerBox: {
@@ -178,7 +178,7 @@ export const globalStyles = StyleSheet.create({
     width: layout.fontPixel(18),
     height: layout.heightPixel(6),
     borderRadius: layout.fontPixel(4),
-    backgroundColor: colors.secondaryBg,
+    backgroundColor: colors.green500,
     marginRight: 4,
   },
   inActive: {
@@ -194,14 +194,14 @@ export const globalStyles = StyleSheet.create({
   surveyBtn: {
     marginBottom: layout.pixelSizeVertical(15),
     borderWidth: 0.5,
-    borderColor: colors.primaryColorLight,
+    borderColor: colors.white,
     paddingHorizontal: layout.pixelSizeHorizontal(10),
     borderRadius: 3,
     height: layout.heightPixel(55),
     justifyContent: 'center',
   },
   surveyBtnActive: {
-    backgroundColor: colors.secondaryBg,
+    backgroundColor: colors.green500,
   },
   optionContainer: {
     flexDirection: 'row',
@@ -213,7 +213,7 @@ export const globalStyles = StyleSheet.create({
     flexBasis: '46%',
     borderRadius: 5,
     borderWidth: 0.5,
-    borderColor: colors.primaryColorLight,
+    borderColor: colors.white,
     height: OPTION_HEIGHT,
     marginBottom: layout.pixelSizeVertical(30),
   },
@@ -270,13 +270,13 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#E5E1F6',
   },
   codeActive: {
-    backgroundColor: colors.secondaryBg,
+    backgroundColor: colors.green500,
   },
   dot: {
     width: 5,
     height: 5,
     borderRadius: 2.5,
-    backgroundColor: colors.secondaryBgGreen,
+    backgroundColor: colors.green500,
     marginRight: layout.pixelSizeHorizontal(4),
   },
   logo: {
