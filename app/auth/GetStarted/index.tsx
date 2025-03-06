@@ -1,4 +1,4 @@
-import { colors } from "@/constants";
+import { colors, layout } from "@/constants";
 import React from "react";
 import { Button, Text } from "@/components";
 import { View, StyleSheet, Image } from "react-native";
@@ -50,15 +50,15 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: layout.pixelSizeHorizontal(20),
   },
   imageContainer: {
     alignItems: "center",
-    marginBottom: 150,
+    marginBottom: layout.pixelSizeVertical(150),
   },
   image: {
-    width: 250,
-    height: 250,
+    width: layout.pixelSizeHorizontal(250),
+    height: layout.pixelSizeVertical(300),
     resizeMode: "contain",
   },
   buttonContainer: {

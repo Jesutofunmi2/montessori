@@ -66,9 +66,9 @@ export const Input = memo(
         {label ? (
           <BaseText style={[{ paddingBottom: layout.pixelSizeVertical(10) }, labelStyle]}>
             {required ? (
-              <Text text="* " fontFamily="Fredoka_500Medium" color={colors.green500} fontSize={16} />
+              <Text text="* " fontFamily="Fredoka_400Regular" color={colors.red500} fontSize={16} />
             ) : null}
-            <Text text={label} color={colors.green500} fontSize={16} style={styles.label} />
+            <Text text={label} color={colors.gray500} fontSize={16} style={styles.label} fontFamily="Fredoka_400Regular"/>
           </BaseText>
         ) : null}
         <View
@@ -79,10 +79,10 @@ export const Input = memo(
               height,
               backgroundColor:
                 editable === true
-                  ? 'transparent'
+                  ? '#F7F9FB'
                   : editableBackGroundColor
                   ? editableBackGroundColor
-                  : '#eee',
+                  : '#D0D4DA',
             },
             containerStyle,
           ]}>
@@ -112,7 +112,7 @@ export const Input = memo(
                     ? 'transparent'
                     : editableBackGroundColor
                     ? editableBackGroundColor
-                    : '#eee',
+                    : '#D0D4DA',
               },
               style,
             ]}
@@ -151,7 +151,7 @@ export const Input = memo(
         {!error && info && (
           <Text
             text={info}
-            color={colors.green500}
+            color={colors.red500}
             fontSize={14}
             style={[styles.info, infoStyle]}
           />
@@ -163,22 +163,23 @@ export const Input = memo(
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginBottom: layout.fontPixel(20),
+    margin: layout.fontPixel(15),
   },
   container: {
-    borderRadius: 4,
-    paddingHorizontal: layout.pixelSizeHorizontal(20),
+    borderRadius: 8,
+    paddingHorizontal: layout.pixelSizeHorizontal(18),
     borderWidth: 0.75,
-    borderColor: 'rgba(151, 151, 151, 0.3)',
+    borderColor: colors.deepGray,
+    backgroundColor: colors.deepGray,
   },
   input: {
     flex: 1,
     borderRadius: 4,
-    fontSize: layout.fontPixel(16),
+    fontSize: layout.fontPixel(18),
     color: colors.green500,
-    fontWeight: '400',
-    fontFamily: 'DMSans-Regular',
-    borderColor: colors.green500,
+    fontFamily: 'Fredoka_400Regular',
+    borderColor: colors.deepGray,
+    backgroundColor: colors.deepGray,
   },
   label: {
     paddingBottom: layout.pixelSizeVertical(10),

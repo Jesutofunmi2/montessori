@@ -26,22 +26,24 @@ import { globalStyles } from '../../../assets/globalStyles';
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 15,
+    marginTop: layout.pixelSizeVertical(15),
     paddingHorizontal: globalStyles.container.paddingHorizontal,
   },
   footerText: {
-    textAlign: 'center',
-    paddingTop: layout.pixelSizeVertical(16),
+    alignItems: "center", 
+    gap:10,
+    paddingTop: layout.pixelSizeVertical(86),
   },
   body: {
     flex: 0.6,
   },
   form: {
-    marginTop: layout.pixelSizeVertical(24),
+    marginTop: layout.pixelSizeVertical(20),
     flexGrow: 1,
   },
   btnWrapper: {
-    width: 350,
+    alignItems: "center",  
+    paddingTop: layout.pixelSizeVertical(10),
   },
   textContainer: {
     flex: 1,

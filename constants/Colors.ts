@@ -57,4 +57,6 @@ export default {
   gray300: "#D0D4DA",
   gray500: "#64748A",
   deepBlack: "#0F172A",
+  deepGray: "#E1E7EF",
+  slate500: "#1E293B",
 };

@@ -35,7 +35,7 @@ export const Button = memo(
     outlined,
     loaderColor = colors.green500,
     disabled,
-    // color,
+    color,
     isLoading = false,
     isDanger,
     textStyle,
