@@ -4,6 +4,7 @@ import OnBoarding from "./auth/OnBoarding";
 import Login from "./auth/Login";
 import SplashScreen from "./auth/SplashScreen";
 import GetStarted from "./auth/GetStarted";
+import BioData from "./auth/BioData";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,12 @@ export default function RootLayout() {
           name="Login"
           options={{ headerShown: false, title: "Login" }}
           component={Login}
+        />
+
+       <Stack.Screen
+          name="BioData"
+          options={{ headerShown: false, title: "BioData" }}
+          component={BioData}
         />
       </Stack.Navigator>
   );

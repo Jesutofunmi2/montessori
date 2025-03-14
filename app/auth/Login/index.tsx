@@ -17,14 +17,14 @@ import { globalStyles } from "../../../assets/globalStyles";
 import { usePlatform } from "../../../hooks";
 import { colors, layout } from "@/constants";
 import { ArrowBackIcon } from "@/assets/svgs";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 import GoogleIcon from "@/assets/svgs/GoogleIcon";
 import FacebookIcon from "@/assets/svgs/FacebookIcon";
 import AppleIcon from "@/assets/svgs/AppleIcon";
 
 const Login = () => {
   const { isIOS } = usePlatform();
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <SafeAreaView style={[globalStyles.wrapper, styles.wrapper]}>
       <ScrollView
@@ -46,6 +46,8 @@ const Login = () => {
             />
           </View>
         </View>
+
+
         <View style={[styles.body, globalStyles.body]}>
           <View style={styles.form}>
             <Input
@@ -77,6 +79,9 @@ const Login = () => {
                 fontFamily: "Fredoka_400Regular",
                 fontSize: 14,
                 color: colors.deepGray,
+              }}
+              onPress={() => {
+                navigation.navigate("BioData");
               }}
             />
           </View>

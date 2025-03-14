@@ -48,6 +48,7 @@ export const darkTheme = {
 
 export default {
   green500: "#22C45E",
+  green200: "#BAF6CF",
   yellow500: "#E9B208",
   blue500: "#3B81F5",
   purple500: "#A755F6",
@@ -56,6 +57,7 @@ export default {
   black: "#0F172A",
   gray300: "#D0D4DA",
   gray500: "#64748A",
+  gray200: "#E4E6EA",
   deepBlack: "#0F172A",
   deepGray: "#E1E7EF",
   slate500: "#1E293B",
