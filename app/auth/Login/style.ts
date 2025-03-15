@@ -20,7 +20,7 @@ import { globalStyles } from '../../../assets/globalStyles';
     flex: 0.4,
     justifyContent: 'flex-end',
     marginBottom: layout.pixelSizeVertical(20),
-    fontSize: 24,
+    fontSize: layout.fontPixel(24),
   },
   headerContent: {
     flexDirection: "row",

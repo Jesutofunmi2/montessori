@@ -92,13 +92,13 @@ export const Input = memo(
                 text={countryCode || '+234  '}
                 fontSize={16}
                 textAlign="center"
-                color={colors.green500}
+                color={colors.black}
               />
               {iconLeft}
             </View>
           ) : null}
           <TextInput
-            placeholderTextColor={colors.green500}
+            placeholderTextColor={colors.black}
             secureTextEntry={secureTextEntry}
             autoCapitalize="none"
             autoCorrect={false}

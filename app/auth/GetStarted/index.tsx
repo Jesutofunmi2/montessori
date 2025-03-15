@@ -17,14 +17,14 @@ const GetStarted = () => {
           <Text
             text={"Nurture House Montessori"}
             color={colors.black}
-            fontSize={28}
+            fontSize={layout.fontPixel(28)}
             fontFamily="Fredoka_700Bold"
             textAlign="center"
           />
           <Text
             text="Learn to read for free"
             color={colors.gray500}
-            fontSize={20}
+            fontSize={layout.fontPixel(20)}
             textAlign="center"
             fontFamily="Fredoka_400Regular"
           />

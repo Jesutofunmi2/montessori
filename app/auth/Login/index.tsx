@@ -39,7 +39,7 @@ const Login = () => {
           <View style={styles.textContainer}>
             <Text
               text={"Enter your details"}
-              fontSize={20}
+              fontSize={layout.fontPixel(25)}
               textAlign="center"
               color={colors.deepBlack}
               fontFamily="Fredoka_500Medium"
@@ -55,6 +55,11 @@ const Login = () => {
               placeholder="Enter email or phone"
               keyboardType="email-address"
               required
+              style={{
+                fontFamily: "Fredoka_400Regular",
+                fontSize: layout.fontPixel(16),
+                color: colors.slate500
+              }}
             />
 
             <Input
@@ -62,6 +67,11 @@ const Login = () => {
               placeholder="Enter password"
               required
               isPassword={true}
+              style={{
+                fontFamily: "Fredoka_400Regular",
+                fontSize: layout.fontPixel(16),
+                color: colors.slate500
+              }}
             />
 
             <Input
@@ -69,6 +79,11 @@ const Login = () => {
               placeholder="Confirm password"
               required
               isPassword={true}
+              style={{
+                fontFamily: "Fredoka_400Regular",
+                fontSize: layout.fontPixel(16),
+                color: colors.slate500
+              }}
             />
           </View>
           <View style={styles.btnWrapper}>
@@ -77,7 +92,7 @@ const Login = () => {
               outlined={true}
               textStyle={{
                 fontFamily: "Fredoka_400Regular",
-                fontSize: 14,
+                fontSize: layout.fontPixel(16),
                 color: colors.deepGray,
               }}
               onPress={() => {
@@ -93,7 +108,7 @@ const Login = () => {
               iconLeft={<GoogleIcon />}
               textStyle={{
                 fontFamily: "Fredoka_400Regular",
-                fontSize: 12,
+                fontSize: layout.fontPixel(16),
                 color: colors.slate500,
               }}
             />
@@ -103,7 +118,7 @@ const Login = () => {
               iconLeft={<FacebookIcon />}
               textStyle={{
                 fontFamily: "Fredoka_400Regular",
-                fontSize: 12,
+                fontSize: layout.fontPixel(16),
                 color: colors.slate500,
               }}
             />
@@ -113,14 +128,14 @@ const Login = () => {
               iconLeft={<AppleIcon />}
               textStyle={{
                 fontFamily: "Fredoka_400Regular",
-                fontSize: 12,
+                fontSize: layout.fontPixel(16),
                 color: colors.slate500,
               }}
             />
             <Text
               text="By continuing, you agree to our Terms and Privacy Policy"
               textAlign="center"
-              fontSize={14}
+              fontSize={layout.fontPixel(18)}
               fontFamily="Fredoka_400Regular"
               color={colors.slate500}
             />
