@@ -100,7 +100,6 @@ const Login = () => {
               }}
             />
           </View>
-
           <View style={styles.footerText}>
             <Button
               title={"SIGN UP WITH GOOGLE"}

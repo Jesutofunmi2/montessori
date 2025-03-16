@@ -8,7 +8,6 @@ import { ArrowBackIcon } from "@/assets/svgs";
 import styles from "./style";
 import AvatarGrid from "../AvatarGrid";
 
-
 interface BioDataQuestionProps {
   question: string;
   options: string[];
@@ -78,7 +77,7 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
             ))}
           </View>
         ) : options?.length > 0 && options?.every((opt) => opt === "image") ? (
-          <View style={{ marginTop: 15 }}>
+          <View style={{ marginTop: 15, alignItems: "center" }}>
             <Text
               style={styles.question}
               text={`Choose an avatar for ${answer[2]}`}
@@ -86,9 +85,8 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
               fontFamily="Fredoka_500Medium"
               fontSize={layout.fontPixel(38)}
             />
-            <View style={styles.container}>
-              <AvatarGrid />
-            </View>
+
+            <AvatarGrid />
           </View>
         ) : (
           <View style={styles.input}>

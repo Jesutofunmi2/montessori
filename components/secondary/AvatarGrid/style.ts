@@ -5,16 +5,16 @@ const styles = StyleSheet.create({
       padding: 10,
     },
     avatarContainer: {
-      width: 80,
-      height: 80,
-      borderRadius: 40,
+      width: 90,
+      height: 90,
+      borderRadius: 50,
       justifyContent: "center",
       alignItems: "center",
       margin: 10,
     },
     avatarImage: {
-      width: 70,
-      height: 70,
+      width: 90,
+      height: 90,
       borderRadius: 35,
     },
     avatarText: {
