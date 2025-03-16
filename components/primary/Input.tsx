@@ -36,6 +36,7 @@ type InputProps = TextInput['props'] & {
   infoStyle?: StyleProp<TextStyle>;
   iconRight?: React.ReactElement;
   iconLeft?: React.ReactElement;
+  isNumeric?: boolean
 };
 
 export const Input = memo(
@@ -57,6 +58,7 @@ export const Input = memo(
     infoStyle,
     iconRight,
     iconLeft,
+    isNumeric,
     ...rest
   }: InputProps) => {
     const { secureTextEntry, toggleEntry } = useSecureTextEntry(isPassword);
@@ -98,11 +100,12 @@ export const Input = memo(
             </View>
           ) : null}
           <TextInput
-            placeholderTextColor={colors.black}
+            placeholderTextColor={colors.gray500}
             secureTextEntry={secureTextEntry}
             autoCapitalize="none"
             autoCorrect={false}
             editable={!isLoading && editable}
+            keyboardType={isNumeric ? "numeric" : "default"}
             style={[
               styles.input,
               {
