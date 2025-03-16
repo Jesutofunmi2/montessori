@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
     },
     question: {
       textAlign: "center",
+      color: colors.slate500,
+      fontFamily: "Fredoka_500Medium",
+      fontSize: layout.fontPixel(38),
       marginBottom: layout.pixelSizeVertical(50),
     },
     container: {

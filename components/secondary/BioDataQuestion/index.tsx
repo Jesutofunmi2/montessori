@@ -44,15 +44,11 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
           </TouchableOpacity>
           <ProgressiveBar progress={progress} />
         </View>
-
         {options?.length > 0 &&
         options.every((opt) => opt === "image") ? null : (
           <Text
             style={styles.question}
             text={question}
-            color={colors.slate500}
-            fontFamily="Fredoka_500Medium"
-            fontSize={layout.fontPixel(38)}
           />
         )}
         {options?.length > 0 && !options?.every((opt) => opt === "image") ? (
@@ -77,17 +73,16 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
             ))}
           </View>
         ) : options?.length > 0 && options?.every((opt) => opt === "image") ? (
-          <View style={{ marginTop: 15, alignItems: "center" }}>
-            <Text
-              style={styles.question}
-              text={`Choose an avatar for ${answer[2]}`}
-              color={colors.slate500}
-              fontFamily="Fredoka_500Medium"
-              fontSize={layout.fontPixel(38)}
-            />
-
-            <AvatarGrid />
-          </View>
+         
+            <View style={{ marginTop: 15, alignItems: "center" }}>
+              <Text
+                style={styles.question}
+                text={`Choose an avatar for ${answer[2]}`}
+              />
+              <AvatarGrid />
+             
+            </View>
+         
         ) : (
           <View style={styles.input}>
             <Input
@@ -121,6 +116,7 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
           </View>
         )}
       </View>
+      
       {options?.length > 0 && options.every((opt) => opt === "image") ? null : (
         <View style={styles.contentWrapper}>
           <View style={styles.buttonContainer}>
