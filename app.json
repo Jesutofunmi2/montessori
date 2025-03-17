@@ -41,6 +41,7 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "owner": "lonux"
   }
 }
