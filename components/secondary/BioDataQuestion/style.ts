@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
       flex: 0.3,
       alignItems: "center",
       paddingHorizontal: layout.pixelSizeHorizontal(20),
+      marginTop: layout.pixelSizeVertical(20),
     },
     contentWrapper: {
       flex: 0.6,

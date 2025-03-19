@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
-import { View, TouchableOpacity, SafeAreaView, ScrollView } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { Button, Input, ProgressiveBar, Text } from "../../primary";
 import { colors, layout } from "@/constants";
 import { ArrowBackIcon } from "@/assets/svgs";
@@ -28,7 +28,7 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
 }) => {
   const [selected, setSelected] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState("");
-  const answer = useSelector((state: RootState) => state.answers.answers);
+  const answer = useSelector((state: RootState) => state.bioDataAnswerReducer.answers);
 
   useEffect(() => {
     setSelected(null);

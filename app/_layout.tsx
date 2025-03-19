@@ -8,6 +8,7 @@ import BioData from "./auth/BioData";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store";
+import Home from "./main/Dashboard";
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +45,12 @@ export default function RootLayout() {
             name="BioData"
             options={{ headerShown: false, title: "BioData" }}
             component={BioData}
+          />
+
+          <Stack.Screen
+            name="Home"
+            options={{ headerShown: false, title: "Home" }}
+            component={Home}
           />
         </Stack.Navigator>
       </PersistGate>

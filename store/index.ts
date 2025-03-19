@@ -1,21 +1,18 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
-import bioDataAnswerReducer from "./bioDataAnswerSlice";
+import { rootReducer } from "./modules";
 
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
 };
 
-const persistedReducer = persistReducer(persistConfig, bioDataAnswerReducer);
-
+const persistedReducer = persistReducer(persistConfig, combineReducers(rootReducer));
 
 export const store = configureStore({
-  reducer: {
-    answers: persistedReducer,
-  },
+  reducer: persistedReducer,
+  
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,

@@ -61,3 +61,11 @@ export const avatars: Avatar[] = [
   { id: "14", name: "Grace", color: "#FFDAC1", image: require("@/assets/images/grace.png") },
   { id: "15", name: "Hank", color: "#F3C4FB", image: require("@/assets/images/hank.png") },
 ];
+
+export const subjects = [
+  { id: "1", name: "Mathematics", icon: require("@/assets/images/math.png")},
+  { id: "2", name: "Language", icon: require("@/assets/images/speaking.png") },
+  { id: "3", name: "Sensorial", icon: require("@/assets/images/uranus.png")},
+  { id: "4", name: "Science", icon: require("@/assets/images/world.png")},
+  { id: "5", name: "Geography", icon: require("@/assets/images/dizzy.png") },
+];

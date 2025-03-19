@@ -1,9 +1,8 @@
-import { SafeAreaView, ScrollView } from "react-native";
-import styles from "./style";
-import { globalStyles } from "../../../assets/globalStyles";
+import { ScrollView } from "react-native";
 import BioDataQuestion from "@/components/secondary/BioDataQuestion";
 import React from "react";
 import useBioDataLogic from "./useBioDataLogic";
+import { SafeAreaView } from "@/components/primary";
 
 const BioData = () => {
   const {
@@ -16,7 +15,7 @@ const BioData = () => {
   } = useBioDataLogic();
 
   return (
-    <SafeAreaView style={[globalStyles.wrapper, styles.wrapper]}>
+    <SafeAreaView>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <BioDataQuestion
           question={updatedSteps[step].question}

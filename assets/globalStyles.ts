@@ -9,7 +9,7 @@ export const searchHeight = layout.heightPixel(50);
 const width = Dimensions.get('screen').width;
 
 export const globalStyles = StyleSheet.create({
-  wrapper: { flex: 1, backgroundColor: colors.gray300 },
+  wrapper: { flex: 1, backgroundColor: colors.white },
   container: {
     paddingHorizontal: HORIZONTAL_PADDING,
     flexGrow: 1,

@@ -2,13 +2,11 @@ import React from "react";
 import {
   Text,
   Input,
-  ProgressiveBar,
   Button,
+  SafeAreaView,
 } from "../../../components/primary";
 import {
   View,
-  Text as BaseText,
-  SafeAreaView,
   TouchableOpacity,
   ScrollView,
 } from "react-native";
@@ -26,7 +24,7 @@ const Login = () => {
   const { isIOS } = usePlatform();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
-    <SafeAreaView style={[globalStyles.wrapper, styles.wrapper]}>
+    <SafeAreaView style={[styles.wrapper]}>
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         keyboardShouldPersistTaps="handled"
@@ -48,7 +46,7 @@ const Login = () => {
         </View>
 
 
-        <View style={[styles.body, globalStyles.body]}>
+        <View style={[globalStyles.body]}>
           <View style={styles.form}>
             <Input
               label="Enter email or phone"

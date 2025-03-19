@@ -15,7 +15,7 @@ const initialState: AnswerState = {
   totalQuestions: 0
 };
 
-const bioDataAnswerSlice = createSlice({
+export const bioDataAnswerSlice = createSlice({
     name: "answers",
     initialState,
     reducers: {
@@ -48,5 +48,4 @@ const bioDataAnswerSlice = createSlice({
   });
   
   export const { setAnswer, goBack, resetAnswers } = bioDataAnswerSlice.actions;
-  export default bioDataAnswerSlice.reducer;
   
