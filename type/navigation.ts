@@ -5,4 +5,7 @@ type RootStackParamList = {
     Login: undefined;
     GetStarted: undefined;
     BioData : undefined;
+    Profile: undefined;
+    Learning: undefined;
+    Quest: undefined;
   };

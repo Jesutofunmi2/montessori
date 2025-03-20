@@ -3,3 +3,7 @@ export * from './ArrowBackIcon';
 export * from './GoogleIcon';
 export * from './FacebookIcon';
 export * from './AppleIcon';
+export * from './NotificationIcon';
+export * from './FireIcon';
+export * from './SilverIcon';
+export * from './HomeIcon';

@@ -68,4 +68,7 @@ export const subjects = [
   { id: "3", name: "Sensorial", icon: require("@/assets/images/uranus.png")},
   { id: "4", name: "Science", icon: require("@/assets/images/world.png")},
   { id: "5", name: "Geography", icon: require("@/assets/images/dizzy.png") },
+  { id: "6", name: "Sensorial", icon: require("@/assets/images/uranus.png")},
+  { id: "7", name: "Science", icon: require("@/assets/images/world.png")},
+  { id: "8", name: "Geography", icon: require("@/assets/images/dizzy.png") },
 ];

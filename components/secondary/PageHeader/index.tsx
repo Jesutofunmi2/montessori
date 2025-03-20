@@ -1,4 +1,4 @@
-import { Text, Image } from "@/components/primary";
+import { Text, Image, SVGIcon } from "@/components/primary";
 import { colors } from "@/constants";
 import { RootState } from "@/store";
 import React from "react";
@@ -6,6 +6,10 @@ import { View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSelector } from "react-redux";
 import HorizontalLineWithTriangle from "../HorizontalLine";
+import AppleIcon from "@/assets/svgs/AppleIcon";
+import NotificationIcon from "@/assets/svgs/NotificationIcon";
+import FireIcon from "@/assets/svgs/FireIcon";
+import SilverIcon from "@/assets/svgs/SilverIcon";
 
 const HeaderPage = () => {
   const selectedImage = useSelector(
@@ -13,13 +17,13 @@ const HeaderPage = () => {
   );
   return (
     <View style={styles.header}>
-      <Image  source={require("../../../assets/images/notification.png")} />
+      <NotificationIcon />
       <View style={styles.points}>
-        <Image source={require("../../../assets/images/Small.png")} />
+        <FireIcon />
         <Text style={styles.pointText} text={"0"} />
       </View>
       <View style={styles.points}>
-        <Image source={require("../../../assets/images/silver.png")} />
+        <SilverIcon />
         <Text style={styles.pointText} text="500" />
       </View>
       {selectedImage ? (

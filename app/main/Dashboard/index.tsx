@@ -5,6 +5,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Text } from "@/components";
 import { colors } from "@/constants";
+import CustomBottomNav from "@/components/secondary/BottomNavigation";
 
 const Home = () => (
   <View style={styles.container}>
@@ -12,6 +13,7 @@ const Home = () => (
     <Greeting />
     <Text style={styles.subjectsTitle} text="Subjects" />
     <SubjectsList />
+    <CustomBottomNav />
   </View>
 );
 

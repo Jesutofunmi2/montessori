@@ -9,6 +9,9 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store";
 import Home from "./main/Dashboard";
+import Profile from "./main/Profile";
+import Quest from "./main/Quest";
+import Learning from "./main/Learning";
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +54,24 @@ export default function RootLayout() {
             name="Home"
             options={{ headerShown: false, title: "Home" }}
             component={Home}
+          />
+
+          <Stack.Screen
+            name="Profile"
+            options={{ headerShown: false, title: "Profile" }}
+            component={Profile}
+          />
+
+          <Stack.Screen
+            name="Quest"
+            options={{ headerShown: false, title: "Quest" }}
+            component={Quest}
+          />
+
+          <Stack.Screen
+            name="Learning"
+            options={{ headerShown: false, title: "Learning" }}
+            component={Learning}
           />
         </Stack.Navigator>
       </PersistGate>

@@ -32,7 +32,7 @@ const BioDataQuestion: React.FC<BioDataQuestionProps> = ({
 
   useEffect(() => {
     setSelected(null);
-    setInputValue(inputValue || "");
+    setInputValue("");
   }, [question, step]);
 
   return (

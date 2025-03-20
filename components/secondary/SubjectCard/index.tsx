@@ -9,7 +9,6 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 type Subject = {
   name: string;
@@ -42,7 +41,7 @@ const SubjectsList = () => {
 const styles = StyleSheet.create({
   subjectsTitle: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Fredoka_500Medium",
     marginBottom: 10,
   },
   subjectsContainer: {
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
   },
   subjectText: {
     fontSize: 18,
-    fontFamily: "Fredoka_400Regular",
+    fontFamily: "Fredoka_500Medium",
   },
 });
 
