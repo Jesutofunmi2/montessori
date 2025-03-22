@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
     gap: 15,
     backgroundColor: colors.green500,
     padding: 20,
-    borderRadius: 12,
+    borderRadius: 15,
     marginBottom: 20,
 
     shadowColor: "#000",
-    shadowOffset: { width: 4, height: 4 },
+    shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
     elevation: 10,

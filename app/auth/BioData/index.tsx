@@ -1,8 +1,8 @@
 import { ScrollView } from "react-native";
-import BioDataQuestion from "@/components/secondary/BioDataQuestion";
 import React from "react";
 import useBioDataLogic from "./useBioDataLogic";
 import { SafeAreaView } from "@/components/primary";
+import secondary from "@/components/secondary";
 
 const BioData = () => {
   const {
@@ -17,7 +17,7 @@ const BioData = () => {
   return (
     <SafeAreaView>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <BioDataQuestion
+        <secondary.BioDataQuestion
           question={updatedSteps[step].question}
           options={updatedSteps[step].options}
           progress={progress}

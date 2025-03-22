@@ -1,19 +1,16 @@
-import Header from "@/components/secondary/PageHeader";
-import Greeting from "@/components/secondary/GreetingCard";
-import SubjectsList from "@/components/secondary/SubjectCard";
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Text } from "@/components";
 import { colors } from "@/constants";
-import CustomBottomNav from "@/components/secondary/BottomNavigation";
+import secondary from '../../../components/secondary/index';
 
 const Home = () => (
   <View style={styles.container}>
-    <Header />
-    <Greeting />
+    <secondary.HeaderPage />
+    <secondary.Greeting />
     <Text style={styles.subjectsTitle} text="Subjects" />
-    <SubjectsList />
-    <CustomBottomNav />
+    <secondary.SubjectsList />
+    <secondary.CustomBottomNav />
   </View>
 );
 

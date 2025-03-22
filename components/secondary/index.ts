@@ -5,6 +5,7 @@ import HeaderPage from "./PageHeader";
 import SubjectsList from "./SubjectCard";
 import HorizontalLineWithTriangle from "./HorizontalLine";
 import CustomBottomNav from "./BottomNavigation";
+import LoaderHelper from "./LoaderHelper";
 
 const secondary = {
   BioDataQuestion,
@@ -14,5 +15,6 @@ const secondary = {
   SubjectsList,
   HorizontalLineWithTriangle,
   CustomBottomNav,
+  LoaderHelper,
 };
 export default secondary;
