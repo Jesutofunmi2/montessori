@@ -1,5 +1,6 @@
 
 type RootStackParamList = {
+    SplashScreen: undefined;
     OnBoarding: undefined;
     Home: undefined;
     Login: undefined;
@@ -8,4 +9,5 @@ type RootStackParamList = {
     Profile: undefined;
     Learning: undefined;
     Quest: undefined;
+    SubjectDetail: { subject: { id: string; name: string; icon: any; topics: { id: string; name: string; questions: string[]; }[]; }; };
   };

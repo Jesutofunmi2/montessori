@@ -12,8 +12,10 @@ import Home from "./main/Dashboard";
 import Profile from "./main/Profile";
 import Quest from "./main/Quest";
 import Learning from "./main/Learning";
+import SubjectDetail from "./main/SubjectDetail";
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
 
 export default function RootLayout() {
   return (
@@ -72,6 +74,11 @@ export default function RootLayout() {
             name="Learning"
             options={{ headerShown: false, title: "Learning" }}
             component={Learning}
+          />
+          <Stack.Screen
+            name="SubjectDetail"
+            options={{ headerShown: false, title: "SubjectDetail" }}
+            component={SubjectDetail}
           />
         </Stack.Navigator>
       </PersistGate>

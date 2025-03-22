@@ -1,6 +1,7 @@
 import { Image } from "@/components/primary";
 import { colors } from "@/constants";
 import { subjects } from "@/constants/Slides";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   View,
@@ -16,21 +17,22 @@ type Subject = {
 };
 
 const SubjectItem = ({ name, icon }: Subject) => (
-  <TouchableOpacity>
     <View style={styles.subjectItem}>
       <Text style={styles.subjectText}>{name}</Text>
       <Image source={icon} alt={name} style={{ width: 40, height: 40 }} />
     </View>
-  </TouchableOpacity>
 );
 
 const SubjectsList = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <FlatList
       data={subjects}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
+        <TouchableOpacity onPress={() => navigation.navigate("SubjectDetail", { subject: item })}>
         <SubjectItem name={item.name} icon={item.icon} />
+        </TouchableOpacity>
       )}
       contentContainerStyle={styles.subjectsContainer}
       showsVerticalScrollIndicator={false}
