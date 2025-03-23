@@ -1,4 +1,3 @@
-import { steps } from "@/constants/Slides";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AnswerState {

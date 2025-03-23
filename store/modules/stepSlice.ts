@@ -6,7 +6,7 @@ const initialState = {
   totalSteps: 5,
 };
 
-const stepSlice = createSlice({
+export const stepSlice = createSlice({
   name: "step",
   initialState,
   reducers: {
@@ -24,4 +24,3 @@ const stepSlice = createSlice({
 });
 
 export const { previousStep, resetStep } = stepSlice.actions;
-export default stepSlice.reducer;

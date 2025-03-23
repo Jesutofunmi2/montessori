@@ -4,14 +4,12 @@ import {
   View,
   StyleSheet,
   Text as Tee,
-  TouchableOpacity,
   FlatList,
   ListRenderItem,
   Dimensions,
 } from "react-native";
 import { Text } from "@/components";
 import OnBoardingCard from "@/components/primary/OnBoardingCard";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import useOnBoardingLogic from "./useOnBoardingLogic";
 import { slides } from "@/constants/Slides";
 
@@ -29,10 +27,6 @@ const OnBoarding = () => {
     color: string;
   }> = ({ item }) => (
     <View style={[styles.slide, { backgroundColor: item.color }]}>
-      <TouchableOpacity style={styles.skipButton} onPress={handleSkip}>
-        <Tee style={[styles.skipText, { color: item.color }]}>Skip</Tee>
-        <Ionicons name="arrow-forward" size={20} color={item.color} />
-      </TouchableOpacity>
       <View style={styles.textContainer}>
         <Text
           text={item.title}

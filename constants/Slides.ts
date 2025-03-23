@@ -143,8 +143,8 @@ export const subjects = [
     name: "Mathematics",
     icon: require("@/assets/images/math.png"),
     topics: [
-      { id: "1", name: "Addition", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
-      { id: "2", name: "Subtraction", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
+      { id: "1", name: "Number Rods", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
+      { id: "2", name: "Sandpaper Numbers", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
       { id: "3", name: "Multiplication", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
       { id: "4", name: "Division", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
       { id: "5", name: "Square Root", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
