@@ -3,6 +3,7 @@ import { View, StyleSheet } from "react-native";
 import { Text } from "@/components";
 import { colors } from "@/constants";
 import secondary from '../../../components/secondary/index';
+import ThreeDCard from "@/components/primary/ThreeD";
 
 const Home = () => (
   <View style={styles.container}>

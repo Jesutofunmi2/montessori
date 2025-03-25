@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderColor: colors.gray300,
     borderWidth: 2,
+    transform: [{ perspective: 1000 }, { rotateX: "0deg" }, { rotateY: "0deg" }],
   },
   subjectText: {
     fontSize: 18,

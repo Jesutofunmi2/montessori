@@ -15,7 +15,10 @@ export const userSlice = createSlice({
         setHasSeenOnboarding: (state, action: PayloadAction<boolean>) => {
             state.hasSeenOnboarding = action.payload;
         },
+        resetHasSeenOnboarding: ( state ) => {
+            state.hasSeenOnboarding = false;
+        }
     },
 });
 
-export const { setHasSeenOnboarding } = userSlice.actions;
+export const { setHasSeenOnboarding, resetHasSeenOnboarding } = userSlice.actions;

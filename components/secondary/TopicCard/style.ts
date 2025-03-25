@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
       },
       topicText: {
         fontSize: 18,
-        fontFamily: "Fredoka_500Medium",
+        flexShrink: 1,
+        fontFamily: "Fredoka_400Regular",
       },
       disabled: {
         opacity: 0.5,

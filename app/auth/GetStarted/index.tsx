@@ -3,8 +3,12 @@ import React from "react";
 import { Button, Text } from "@/components";
 import { View, StyleSheet, Image } from "react-native";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { useDispatch } from "react-redux";
+import { resetAnswers } from "@/store/modules/bioDataAnswerSlice";
+import { resetHasSeenOnboarding } from "@/store/modules/userSlice";
 
 const GetStarted = () => {
+  const dispatch = useDispatch();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <View style={styles.container}>
@@ -35,10 +39,17 @@ const GetStarted = () => {
         <Button
           title={"SIGN IN WITH EMAIL"}
           onPress={() => {
+            dispatch(resetAnswers());
+            dispatch(resetHasSeenOnboarding());
+          }}
+        />
+        <Button
+          title={"GET STARTED"}
+          outlined={true}
+          onPress={() => {
             navigation.navigate("Login");
           }}
         />
-        <Button title={"GET STARTED"} outlined={true} />
       </View>
     </View>
   );

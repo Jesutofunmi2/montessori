@@ -145,10 +145,10 @@ export const subjects = [
     topics: [
       { id: "1", name: "Number Rods", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
       { id: "2", name: "Sandpaper Numbers", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
-      { id: "3", name: "Multiplication", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
-      { id: "4", name: "Division", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
-      { id: "5", name: "Square Root", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
-      { id: "6", name: "Percentage", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
+      { id: "3", name: "Papersand", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
+      { id: "4", name: "Practiced Shape Matching", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
+      { id: "5", name: "Tracing", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
+      { id: "6", name: "Solved a Logic Puzzle in Brain Boosters", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
     ],
   },
   {
@@ -156,8 +156,8 @@ export const subjects = [
     name: "Language",
     icon: require("@/assets/images/speaking.png"),
     topics: [
-      { id: "1", name: "Addition", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
-      { id: "2", name: "Subtraction", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
+      { id: "1", name: "Explored ‘Animals Around the World", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
+      { id: "2", name: "Played ‘Sound Matching Game’ in Phonics Fun", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
       { id: "3", name: "Multiplication", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },
       { id: "4", name: "Division", questions: ["What is 9 - 4?", "Solve: 15 - 8"] },
       { id: "5", name: "Square Root", questions: ["What is 2 + 3?", "Solve: 5 + 7"] },

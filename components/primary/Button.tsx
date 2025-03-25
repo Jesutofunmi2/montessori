@@ -89,13 +89,10 @@ const styles = StyleSheet.create({
     height: layout.heightPixel(60),
     width: layout.widthPixel(380),
     backgroundColor: colors.green500,
-    elevation: 6,
 
-    shadowColor: "#000",
     shadowOffset: { width: 4, height: 4 },
     shadowOpacity: 0.3,
-    shadowRadius: 4,
-    borderBottomWidth: 4,
+    shadowRadius: 3,
     borderBottomColor: colors.green500, 
   },
   btnOutlined: {
@@ -109,7 +106,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 2, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    elevation: 4,
   },
   iconLeft: {
     marginRight: layout.pixelSizeHorizontal(8),

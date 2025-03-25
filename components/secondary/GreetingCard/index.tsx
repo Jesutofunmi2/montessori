@@ -36,13 +36,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
 
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
+    shadowOffset: { width: 5, height: 5 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
     elevation: 10,
 
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255, 255, 255, 0.5)",
+    transform: [{ perspective: 1000 }, { rotateX: "0deg" }, { rotateY: "0deg" }],
   },
   greetingText: {
     color: colors.white,
