@@ -7,3 +7,6 @@ export * from './NotificationIcon';
 export * from './FireIcon';
 export * from './SilverIcon';
 export * from './HomeIcon';
+export * from './SoundIcon';
+export * from './NextIcon';
+export * from './ResetIcon';

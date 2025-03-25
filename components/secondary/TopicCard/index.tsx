@@ -2,6 +2,7 @@ import { TouchableOpacity, View, Text } from "react-native";
 import styles from "./style";
 import React from "react";
 import LoaderHelper from "../LoaderHelper";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 interface TopicCardInterface {
   item: {
@@ -12,10 +13,12 @@ interface TopicCardInterface {
   enabled: boolean; 
 }
 const TopicCard = ({ item, enabled }: TopicCardInterface) => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <TouchableOpacity
       style={[styles.topicItem, !enabled && styles.disabled]}
       disabled={!enabled}
+      onPress={() => navigation.navigate("Learning")}
     >
       <Text style={[styles.topicText, !enabled && styles.disabledText]}>
         {item.name}
