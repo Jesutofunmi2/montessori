@@ -18,7 +18,7 @@ const TopicCard = ({ item, enabled }: TopicCardInterface) => {
     <TouchableOpacity
       style={[styles.topicItem, !enabled && styles.disabled]}
       disabled={!enabled}
-      onPress={() => navigation.navigate("Learning")}
+      onPress={() => navigation.navigate("LearningRod")}
     >
       <Text style={[styles.topicText, !enabled && styles.disabledText]}>
         {item.name}

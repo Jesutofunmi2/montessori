@@ -7,6 +7,8 @@ import HorizontalLineWithTriangle from "./HorizontalLine";
 import CustomBottomNav from "./BottomNavigation";
 import LoaderHelper from "./LoaderHelper";
 import RodScreen from "./Rod";
+import RodGame from "./Rod/RodGame";
+
 
 const secondary = {
   BioDataQuestion,
@@ -18,5 +20,6 @@ const secondary = {
   CustomBottomNav,
   LoaderHelper,
   RodScreen,
+  RodGame,
 };
 export default secondary;

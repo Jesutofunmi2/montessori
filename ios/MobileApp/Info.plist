@@ -28,7 +28,7 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>myapp</string>
-          <string>com.upnepa.MobileApp</string>
+          <string>com.montesori.MobileApp</string>
         </array>
       </dict>
       <dict>

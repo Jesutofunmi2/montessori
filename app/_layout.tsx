@@ -11,8 +11,9 @@ import { store, persistor } from "../store";
 import Home from "./main/Dashboard";
 import Profile from "./main/Profile";
 import Quest from "./main/Quest";
-import Learning from "./main/Learning";
+import LearningRod from "./main/Learning/NumberRod";
 import SubjectDetail from "./main/SubjectDetail";
+import RodGame from "@/components/secondary/Rod/RodGame";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -71,10 +72,17 @@ export default function RootLayout() {
           />
 
           <Stack.Screen
-            name="Learning"
-            options={{ headerShown: false, title: "Learning" }}
-            component={Learning}
+            name="LearningRod"
+            options={{ headerShown: false, title: "LearningRod" }}
+            component={LearningRod}
           />
+
+          <Stack.Screen
+            name="RodGame"
+            options={{ headerShown: false, title: "RodGame" }}
+            component={RodGame}
+          />
+
           <Stack.Screen
             name="SubjectDetail"
             options={{ headerShown: false, title: "SubjectDetail" }}

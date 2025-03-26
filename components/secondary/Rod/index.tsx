@@ -10,10 +10,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 import LearningCard from "../LearningHeader";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 const RodScreen = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const [count, setCount] = useState(0);
-  const [title, setTitle] = useState("Let’s Learn Number Rods")
+  const [title, setTitle] = useState("Let’s Learn Number Rods");
   const [animations, setAnimations] = useState<{
     [key: number]: Animated.Value;
   }>({});
@@ -23,18 +25,15 @@ const RodScreen = () => {
       const newAnimations = { ...animations, [count]: new Animated.Value(0) };
       setAnimations(newAnimations);
       setCount(count + 1);
-      setTitle(`This is Rod ${count +1 }`);
+      setTitle(`This is Rod ${count + 1}`);
       Animated.timing(newAnimations[count], {
         toValue: 1,
         duration: 1000,
         useNativeDriver: true,
       }).start();
     }
+    if (count === 10) return navigation.navigate("RodGame");
   };
-
-//   useEffect(() => {
-//     setTimeout(() => addRod(), 500);
-//   }, []);
 
   const resetRods = () => {
     setCount(0);
@@ -42,55 +41,55 @@ const RodScreen = () => {
     setTimeout(addRod, 500);
   };
   const rodColors = [
-    { main: '#FF5733', shadow: '#C0392B' },
-    { main: '#3498DB', shadow: '#21618C' },
+    { main: "#FF5733", shadow: "#C0392B" },
+    { main: "#3498DB", shadow: "#21618C" },
   ];
 
   return (
     <View style={[globalStyles.container, globalStyles.body]}>
-    <LearningCard title={title} enabled={true} />
-    <View style={styles.container}>
-      {/* Rods */}
-      {Array.from({ length: count }).map((_, rowIndex) => (
-        <Animated.View
-          key={rowIndex}
-          style={[
-            styles.rodRow,
-            {
-              opacity: animations[rowIndex] || 1,
-              transform: [
-                {
-                  translateY:
-                    animations[rowIndex]?.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [-1000, 0],
-                    }) || 0,
-                },
-              ],
-            },
-          ]}
-        >
-          {Array.from({ length: rowIndex + 1 }).map((__, colIndex) => (
-            <View
-              key={colIndex}
-              style={[
-                styles.rod,
-                { backgroundColor: rodColors[colIndex % 2].main },
-              ]}
-            />
-          ))}
-        </Animated.View>
-      ))}
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity onPress={resetRods} style={styles.button}>
-          <ResetIcon />
-        </TouchableOpacity>
+      <LearningCard title={title} enabled={true} />
+      <View style={styles.container}>
+        {/* Rods */}
+        {Array.from({ length: count }).map((_, rowIndex) => (
+          <Animated.View
+            key={rowIndex}
+            style={[
+              styles.rodRow,
+              {
+                opacity: animations[rowIndex] || 1,
+                transform: [
+                  {
+                    translateY:
+                      animations[rowIndex]?.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [-1000, 0],
+                      }) || 0,
+                  },
+                ],
+              },
+            ]}
+          >
+            {Array.from({ length: rowIndex + 1 }).map((__, colIndex) => (
+              <View
+                key={colIndex}
+                style={[
+                  styles.rod,
+                  { backgroundColor: rodColors[colIndex % 2].main },
+                ]}
+              />
+            ))}
+          </Animated.View>
+        ))}
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity onPress={resetRods} style={styles.button}>
+            <ResetIcon />
+          </TouchableOpacity>
 
-        <TouchableOpacity onPress={addRod} style={styles.button}>
-          <NextIcon />
-        </TouchableOpacity>
+          <TouchableOpacity onPress={addRod} style={styles.button}>
+            <NextIcon />
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
     </View>
   );
 };
@@ -103,8 +102,8 @@ const styles = StyleSheet.create({
   },
   rodRow: {
     flexDirection: "row",
-    gap:1,
-    marginTop: 1,
+    gap: 0.5,
+    marginTop: 0.5,
   },
   rod: {
     width: 35,
@@ -117,12 +116,12 @@ const styles = StyleSheet.create({
     elevation: 6,
   },
   buttonContainer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 10,
     left: 0,
     right: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   button: {
     width: 50,
