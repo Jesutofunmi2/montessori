@@ -1,50 +1,19 @@
 import { globalStyles } from "@/assets/globalStyles";
 import NextIcon from "@/assets/svgs/NextIcon";
 import ResetIcon from "@/assets/svgs/ResetIcon";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   View,
-  Text,
   StyleSheet,
   Animated,
   TouchableOpacity,
 } from "react-native";
 import LearningCard from "../LearningHeader";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
+import useRod from "./useRod";
 
 const RodScreen = () => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  const [count, setCount] = useState(0);
-  const [title, setTitle] = useState("Let’s Learn Number Rods");
-  const [animations, setAnimations] = useState<{
-    [key: number]: Animated.Value;
-  }>({});
-
-  const addRod = () => {
-    if (count < 10) {
-      const newAnimations = { ...animations, [count]: new Animated.Value(0) };
-      setAnimations(newAnimations);
-      setCount(count + 1);
-      setTitle(`This is Rod ${count + 1}`);
-      Animated.timing(newAnimations[count], {
-        toValue: 1,
-        duration: 1000,
-        useNativeDriver: true,
-      }).start();
-    }
-    if (count === 10) return navigation.navigate("RodGame");
-  };
-
-  const resetRods = () => {
-    setCount(0);
-    setAnimations({});
-    setTimeout(addRod, 500);
-  };
-  const rodColors = [
-    { main: "#FF5733", shadow: "#C0392B" },
-    { main: "#3498DB", shadow: "#21618C" },
-  ];
-
+  const { navigation, addRod, resetRods, title, animations, count, rodColors } =
+    useRod();
   return (
     <View style={[globalStyles.container, globalStyles.body]}>
       <LearningCard title={title} enabled={true} />

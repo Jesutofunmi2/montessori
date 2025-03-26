@@ -243,3 +243,16 @@ export const subjects = [
     ],
   },
 ];
+
+export const rods = [
+  { id: 1, label: "Rod 1" },
+  { id: 2, label: "Rod 2" },
+  { id: 3, label: "Rod 3" },
+  { id: 4, label: "Rod 4" },
+  { id: 5, label: "Rod 5" },
+  { id: 6, label: "Rod 6" },
+  { id: 7, label: "Rod 7" },
+  { id: 8, label: "Rod 8" },
+  { id: 9, label: "Rod 9" },
+  { id: 10, label: "Rod 10" },
+];
