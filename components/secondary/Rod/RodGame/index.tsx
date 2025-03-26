@@ -9,13 +9,20 @@ const rods = [
   { id: 1, label: "Rod 1" },
   { id: 2, label: "Rod 2" },
   { id: 3, label: "Rod 3" },
+  { id: 4, label: "Rod 4" },
+  { id: 5, label: "Rod 5" },
+  { id: 6, label: "Rod 6" },
+  { id: 7, label: "Rod 7" },
+  { id: 8, label: "Rod 8" },
+  { id: 9, label: "Rod 9" },
+  { id: 10, label: "Rod 10" },
 ];
 
 const RodGame = () => {
-  const [targetRod, setTargetRod] = useState(2);
-  const [title, setTitle] = useState("Can you find 2");
-  const [selectedRod, setSelectedRod] = useState(0);
-  const [message, setMessage] = useState("");
+    const [availableRods, setAvailableRods] = useState<{ id: number; label: string }[]>([]);
+    const [targetRod, setTargetRod] = useState<number | null>(null);
+    const [selectedRod, setSelectedRod] = useState<number | null>(null);
+    const [message, setMessage] = useState("");
   const animations = useRef(rods.map(() => new Animated.Value(0))).current;
 
   useEffect(() => {
@@ -40,17 +47,43 @@ const RodGame = () => {
     }
   };
 
+  const generateNewQuestion = () => {
+    // Pick 3 random rods
+    const shuffledRods = [...rods].sort(() => Math.random() - 0.5);
+    const selectedRods = shuffledRods.slice(0, 3);
+
+    // Choose one as the correct answer
+    const correctRod = selectedRods[Math.floor(Math.random() * selectedRods.length)];
+
+    setAvailableRods(selectedRods);
+    setTargetRod(correctRod.id);
+    setMessage("");
+    setSelectedRod(null);
+  };
+
+  const handleContinue = () => {
+    const newTargetRod = Math.floor(Math.random() * rods.length) + 1;
+    setTargetRod(newTargetRod);
+    //setTitle(`Can you find ${newTargetRod}`);
+    setSelectedRod(0);
+    setMessage("");
+  };
+
   const rodColors = [
     { main: "#FF5733", shadow: "#C0392B" },
     { main: "#3498DB", shadow: "#21618C" },
   ];
 
+  useEffect(() => {
+    generateNewQuestion();
+  }, []);
+
   return (
     <View style={[globalStyles.container, globalStyles.body]}>
-      <LearningCard title={title} enabled={true} />
+      <LearningCard title={`Can you find ${targetRod}`} enabled={true} />
       <View style={styles.container}>
         {/* Rods */}
-        {Array.from({ length: rods.length }).map((_, rowIndex) => (
+        {Array.from({ length: availableRods.length }).map((_, rowIndex) => (
           <Animated.View
             key={rowIndex}
             style={[
@@ -121,7 +154,7 @@ const RodGame = () => {
                 fontSize: layout.fontPixel(20),
                 color: colors.white,
               }}
-              onPress={() => {}}
+              onPress={selectedRod === targetRod ? handleContinue: ()=>{}}
             />
           </View>
         ) : null}
