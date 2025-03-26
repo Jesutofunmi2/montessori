@@ -22,7 +22,6 @@ const RodGame = () => {
     <View style={[globalStyles.container, globalStyles.body]}>
       <LearningCard title={`Can you find ${targetRod}`} enabled={true} />
       <View style={styles.container}>
-        {/* Rods */}
         {Array.from({ length: availableRods.length }).map((_, rowIndex) => (
           <Animated.View
             key={rowIndex}
