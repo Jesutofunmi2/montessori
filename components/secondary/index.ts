@@ -8,6 +8,7 @@ import CustomBottomNav from "./BottomNavigation";
 import LoaderHelper from "./LoaderHelper";
 import RodScreen from "./Rod";
 import RodGame from "./Rod/RodGame";
+import DraggableRod from "./Rod/DraggableRod";
 
 
 const secondary = {
@@ -21,5 +22,6 @@ const secondary = {
   LoaderHelper,
   RodScreen,
   RodGame,
+  DraggableRod,
 };
 export default secondary;

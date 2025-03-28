@@ -3,7 +3,6 @@ import React from "react";
 
 const Learning = () => {
   return (
-  
       <RodScreen/>
   );
 };

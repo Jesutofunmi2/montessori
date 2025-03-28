@@ -256,3 +256,8 @@ export const rods = [
   { id: 9, label: "Rod 9" },
   { id: 10, label: "Rod 10" },
 ];
+
+export const rodColors = [
+  { main: "#FF5733", shadow: "#C0392B" },
+  { main: "#3498DB", shadow: "#21618C" },
+];

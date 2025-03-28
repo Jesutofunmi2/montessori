@@ -2,53 +2,51 @@ import { globalStyles } from "@/assets/globalStyles";
 import NextIcon from "@/assets/svgs/NextIcon";
 import ResetIcon from "@/assets/svgs/ResetIcon";
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Animated,
-  TouchableOpacity,
-} from "react-native";
+import { View, StyleSheet, Animated, TouchableOpacity } from "react-native";
 import LearningCard from "../LearningHeader";
 import useRod from "./useRod";
 
 const RodScreen = () => {
-  const { navigation, addRod, resetRods, title, animations, count, rodColors } =
-    useRod();
+  const { addRod, resetRods, title, animations, count, rodColors } = useRod();
+
   return (
     <View style={[globalStyles.container, globalStyles.body]}>
       <LearningCard title={title} enabled={true} />
       <View style={styles.container}>
-        {/* Rods */}
-        {Array.from({ length: count }).map((_, rowIndex) => (
-          <Animated.View
-            key={rowIndex}
-            style={[
-              styles.rodRow,
-              {
-                opacity: animations[rowIndex] || 1,
-                transform: [
-                  {
-                    translateY:
-                      animations[rowIndex]?.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: [-1000, 0],
-                      }) || 0,
-                  },
-                ],
-              },
-            ]}
-          >
-            {Array.from({ length: rowIndex + 1 }).map((__, colIndex) => (
-              <View
-                key={colIndex}
-                style={[
-                  styles.rod,
-                  { backgroundColor: rodColors[colIndex % 2].main },
-                ]}
-              />
-            ))}
-          </Animated.View>
-        ))}
+        {/* Rods arranged from the bottom upwards */}
+        {Array.from({ length: count })
+          .map((_, rowIndex) => count - rowIndex - 1)
+          .map((rowIndex) => (
+            <Animated.View
+              key={rowIndex}
+              style={[
+                styles.rodRow,
+                {
+                  opacity: animations[rowIndex] || 1,
+                  transform: [
+                    {
+                      translateY:
+                        animations[rowIndex]?.interpolate({
+                          inputRange: [0, 1],
+                          outputRange: [-1000, 0],
+                        }) || 0,
+                    },
+                  ],
+                },
+              ]}
+            >
+              {Array.from({ length: rowIndex + 1 }).map((__, colIndex) => (
+                <View
+                  key={colIndex}
+                  style={[
+                    styles.rod,
+                    { backgroundColor: rodColors[colIndex % 2].main },
+                  ]}
+                />
+              ))}
+            </Animated.View>
+          ))}
+
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={resetRods} style={styles.button}>
             <ResetIcon />
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
   rod: {
     width: 35,
     height: 35,
-    marginRight: -0.5,
+    marginRight: 0,
     borderRadius: 3,
     shadowOffset: { width: 3, height: 3 },
     shadowOpacity: 0.4,
@@ -98,10 +96,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
-  },
-  buttonText: {
-    fontSize: 20,
-    color: "white",
   },
 });
 

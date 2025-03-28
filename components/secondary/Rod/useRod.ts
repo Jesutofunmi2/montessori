@@ -1,3 +1,4 @@
+import { rodColors } from "@/constants/Slides";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { Animated } from "react-native";
@@ -30,10 +31,6 @@ const useRod = () => {
     setAnimations({});
     setTimeout(addRod, 500);
   };
-  const rodColors = [
-    { main: "#FF5733", shadow: "#C0392B" },
-    { main: "#3498DB", shadow: "#21618C" },
-  ];
 
   return {
     navigation,

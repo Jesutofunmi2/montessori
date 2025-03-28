@@ -1,4 +1,4 @@
-import { rods } from "@/constants/Slides";
+import { rodColors, rods } from "@/constants/Slides";
 import React, { useState, useEffect, useRef } from "react";
 import { Animated } from "react-native";
 
@@ -47,10 +47,6 @@ const useGameRod = () => {
     setMessage(rod === targetRod ? "✅ Amazing" : "❌ Incorrect.");
   };
 
-  const rodColors = [
-    { main: "#FF5733", shadow: "#C0392B" },
-    { main: "#3498DB", shadow: "#21618C" },
-  ];
 
   return {
     handleRodClick,
