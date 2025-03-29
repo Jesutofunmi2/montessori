@@ -14,6 +14,7 @@ import Quest from "./main/Quest";
 import LearningRod from "./main/Learning/NumberRod";
 import SubjectDetail from "./main/SubjectDetail";
 import RodGame from "@/components/secondary/Rod/RodGame";
+import RodPuzzle from "@/components/secondary/Rod/DraggableRod";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -87,6 +88,11 @@ export default function RootLayout() {
             name="SubjectDetail"
             options={{ headerShown: false, title: "SubjectDetail" }}
             component={SubjectDetail}
+          />
+           <Stack.Screen
+            name="PuzzleGame"
+            options={{ headerShown: false, title: "PuzzleGame" }}
+            component={RodPuzzle}
           />
         </Stack.Navigator>
       </PersistGate>

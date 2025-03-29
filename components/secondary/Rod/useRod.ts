@@ -23,7 +23,7 @@ const useRod = () => {
         useNativeDriver: true,
       }).start();
     }
-    if (count === 10) return navigation.navigate("RodGame");
+    if (count === 10) return navigation.navigate("PuzzleGame");
   };
 
   const resetRods = () => {
