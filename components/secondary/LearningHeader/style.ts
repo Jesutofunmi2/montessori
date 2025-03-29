@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
       },
       topicText: {
-        fontSize: 20,
+        fontSize: 18,
         flexShrink: 1,
         fontFamily: "Fredoka_500Medium",
         textAlign: "center"

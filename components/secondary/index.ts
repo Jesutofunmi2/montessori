@@ -9,6 +9,7 @@ import LoaderHelper from "./LoaderHelper";
 import RodScreen from "./Rod";
 import RodGame from "./Rod/RodGame";
 import DraggableRod from "./Rod/DraggableRod";
+import PointAndTell from "./Rod/PointAndTell";
 
 
 const secondary = {
@@ -23,5 +24,6 @@ const secondary = {
   RodScreen,
   RodGame,
   DraggableRod,
+  PointAndTell,
 };
 export default secondary;

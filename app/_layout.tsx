@@ -15,9 +15,9 @@ import LearningRod from "./main/Learning/NumberRod";
 import SubjectDetail from "./main/SubjectDetail";
 import RodGame from "@/components/secondary/Rod/RodGame";
 import RodPuzzle from "@/components/secondary/Rod/DraggableRod";
+import PointAndTell from "@/components/secondary/Rod/PointAndTell";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
-
 
 export default function RootLayout() {
   return (
@@ -89,10 +89,15 @@ export default function RootLayout() {
             options={{ headerShown: false, title: "SubjectDetail" }}
             component={SubjectDetail}
           />
-           <Stack.Screen
+          <Stack.Screen
             name="PuzzleGame"
             options={{ headerShown: false, title: "PuzzleGame" }}
             component={RodPuzzle}
+          />
+          <Stack.Screen
+            name="PointAndTell"
+            options={{ headerShown: false, title: "PointAndTell" }}
+            component={PointAndTell}
           />
         </Stack.Navigator>
       </PersistGate>

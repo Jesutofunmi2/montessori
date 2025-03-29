@@ -453,6 +453,12 @@ export const rods = [
   { id: 10, label: "Rod 10" },
 ];
 
+export const rodPoint = [
+  { id: 1, label: "Rod 1" },
+  { id: 2, label: "Rod 2" },
+  { id: 3, label: "Rod 3" },
+];
+
 export const rodColors = [
   { main: "#FF5733", shadow: "#C0392B" },
   { main: "#3498DB", shadow: "#21618C" },

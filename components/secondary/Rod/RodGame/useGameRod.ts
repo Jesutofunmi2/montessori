@@ -1,8 +1,10 @@
 import { rodColors, rods } from "@/constants/Slides";
 import React, { useState, useEffect, useRef } from "react";
 import { Animated } from "react-native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 const useGameRod = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const [availableRods, setAvailableRods] = useState<{ id: number; label: string }[]>([]);
   const [targetRod, setTargetRod] = useState<number | null>(null);
   const [selectedRod, setSelectedRod] = useState<number | null>(null);
@@ -38,6 +40,10 @@ const useGameRod = () => {
     ).start();
   };
 
+  const check = () => {
+    navigation.navigate("PointAndTell");
+  };
+
   useEffect(() => {
     generateNewQuestion();
   }, []);
@@ -56,6 +62,7 @@ const useGameRod = () => {
     availableRods,
     animations,
     rodColors,
+    check,
     generateNewQuestion,
   };
 };

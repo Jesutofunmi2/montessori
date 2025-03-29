@@ -5,6 +5,7 @@ import LearningCard from "../../LearningHeader";
 import { Button, Text } from "@/components/primary";
 import { colors, layout } from "@/constants";
 import useGameRod from "./useGameRod";
+import NextIcon from "@/assets/svgs/NextIcon";
 
 const RodGame = () => {
   const {
@@ -16,6 +17,7 @@ const RodGame = () => {
     animations,
     rodColors,
     generateNewQuestion,
+    check,
   } = useGameRod();
 
   return (
@@ -98,12 +100,25 @@ const RodGame = () => {
               }
             />
           </View>
-        ) : null}
+        ) :  <View style={styles.wrap}>
+        <TouchableOpacity onPress={check} style={styles.button}>
+          <NextIcon />
+        </TouchableOpacity>
+      </View>}
       </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
+  wrap: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    position: "absolute",
+    bottom: 10,
+    left: 0,
+    right: 0,
+  },
   container: {
     flex: 1,
     paddingTop: 80,

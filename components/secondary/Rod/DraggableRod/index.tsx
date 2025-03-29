@@ -1,6 +1,12 @@
 import { globalStyles } from "@/assets/globalStyles";
 import React, { useState, useEffect, useRef } from "react";
-import { View, StyleSheet, Dimensions, Animated, TouchableOpacity } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Dimensions,
+  Animated,
+  TouchableOpacity,
+} from "react-native";
 import {
   PanGestureHandler,
   GestureHandlerRootView,
@@ -10,9 +16,14 @@ import LearningCard from "../../LearningHeader";
 import { colors, layout } from "@/constants";
 import { Button, Text } from "@/components/primary";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { useSharedValue, useAnimatedStyle, withSpring } from "react-native-reanimated";
+import {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+} from "react-native-reanimated";
 import { clamp } from "react-native-redash";
 import NextIcon from "@/assets/svgs/NextIcon";
+import { rodColors } from "@/constants/Slides";
 
 const { width, height } = Dimensions.get("window");
 
@@ -20,11 +31,6 @@ const ROD_HEIGHT = 35;
 const START_POSITION = height * 0.4;
 const THRESHOLD = 20;
 const SCATTER_RANGE = -0.5;
-
-const rodColors = [
-  { main: "#FF5733" }, // Red
-  { main: "#3498DB" }, // Blue
-];
 
 interface RodPosition {
   x: number;
@@ -40,6 +46,7 @@ const ranges = [
 const RodPuzzle: React.FC = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const [rangeIndex, setRangeIndex] = useState<number>(0);
+  const [showButtonContainer, setShowButtonContainer] = useState(false);
   const [count, setCount] = useState<number>(ranges[0][1]);
   const [positions, setPositions] = useState<RodPosition[]>([]);
   let rodCounts: number[] = [];
@@ -50,7 +57,6 @@ const RodPuzzle: React.FC = () => {
 
   const correctOrder = Array.from({ length: count }).map((_, i) => i + 1);
 
-  // Correct positions (stacked at center)
   const correctPositions: RodPosition[] = Array.from({ length: count }).map(
     (_, rowIndex) => ({
       x: width * 0.5 - 20,
@@ -77,13 +83,13 @@ const RodPuzzle: React.FC = () => {
       }
     );
   };
-  
 
   const handleNext = () => {
     const nextIndex = (rangeIndex + 1) % ranges.length;
     setRangeIndex(nextIndex);
     console.log(ranges[nextIndex][0]);
     setIsCorrect(false);
+    setShowButtonContainer(false);
     setCount(ranges[nextIndex][1]);
   };
 
@@ -98,7 +104,6 @@ const RodPuzzle: React.FC = () => {
         Math.pow(finalX - correctX, 2) + Math.pow(finalY - correctY, 2)
       );
 
-      // Snap into place if within threshold
       Animated.timing(animatedValues[index].x, {
         toValue: distance < THRESHOLD ? correctX : finalX,
         duration: 200,
@@ -122,31 +127,28 @@ const RodPuzzle: React.FC = () => {
           (value, i) => value === correctOrder[i]
         );
         setIsCorrect(isMatch);
-        rodCounts = []; // Reset the array
+        setShowButtonContainer(true);
+        rodCounts = [];
       }
     }
   };
 
   const check = () => {
-    // const isMatch = rodCounts.every(
-    //   (value, i) => value === correctOrder[i]
-    // );
-    // setIsCorrect(isMatch);
-    // rodCounts = []; 
-    if (count === 4) return navigation.navigate("RodGame");
-  }
+    navigation.navigate("RodGame");
+  };
 
   const detectOverlap = (dragIndex: number, event: any) => {
     const dragX = event.translationX;
     const dragY = event.translationY;
-  
+
     positions.forEach((pos, index) => {
       if (index !== dragIndex) {
         const distance = Math.sqrt(
           Math.pow(dragX - pos.x, 2) + Math.pow(dragY - pos.y, 2)
         );
-  
-        if (distance < 25 - 15) { // Adjust threshold to detect closer rods
+
+        if (distance < 25 - 15) {
+          // Adjust threshold to detect closer rods
           // Shift away by a larger amount
           Animated.spring(animatedValues[index].x, {
             toValue: pos.x + (Math.random() > 0.5 ? 15 : 15), // Random left/right shift
@@ -154,7 +156,7 @@ const RodPuzzle: React.FC = () => {
             damping: 10,
             useNativeDriver: false,
           }).start();
-  
+
           Animated.spring(animatedValues[index].y, {
             toValue: pos.y + (Math.random() > -0.5 ? 15 : -15), // Random up/down shift
             stiffness: 150,
@@ -165,18 +167,14 @@ const RodPuzzle: React.FC = () => {
       }
     });
   };
-  
 
   useEffect(() => {
-    // Generate shuffled indices
     const shuffledIndices = Array.from({ length: count }, (_, i) => i).sort(
       () => Math.random() - 0.5
     );
-
-    // Compute shuffled start positions
     const shuffledPositions = shuffledIndices.map((index) => ({
-      x: width * 0.5 - 190, // Centered X position
-      y: START_POSITION - index * ROD_HEIGHT - 180, // Start above
+      x: width * 0.5 - 190,
+      y: START_POSITION - index * ROD_HEIGHT - 180,
     }));
 
     setPositions(shuffledPositions);
@@ -189,12 +187,11 @@ const RodPuzzle: React.FC = () => {
 
     setAnimatedValues(animations);
 
-    // Animate each rod dropping in shuffled order
     shuffledIndices.forEach((shuffledIndex, i) => {
       Animated.timing(animations[i].y, {
-        toValue: shuffledPositions[i].y, // Drop to correct position
+        toValue: shuffledPositions[i].y,
         duration: 500,
-        delay: Math.random() * 300, // Random delay for shuffle effect
+        delay: Math.random() * 300,
         useNativeDriver: false,
       }).start();
     });
@@ -248,7 +245,7 @@ const RodPuzzle: React.FC = () => {
         </GestureHandlerRootView>
       </View>
 
-      {isCorrect ? (
+      {showButtonContainer ? (
         <View
           style={[
             styles.buttonContainer,
@@ -276,14 +273,27 @@ const RodPuzzle: React.FC = () => {
             onPress={() => (isCorrect ? handleNext() : () => {})}
           />
         </View>
-      ) :    <TouchableOpacity onPress={check} style={styles.button}>
-      <NextIcon />
-    </TouchableOpacity>}
+      ) : (
+        <View style={styles.wrap}>
+          <TouchableOpacity onPress={() => check()} style={styles.button}>
+            <NextIcon />
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  wrap: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    position: "absolute",
+    bottom: 10,
+    left: 0,
+    right: 0,
+  },
   container: {
     flex: 1,
     backgroundColor: colors.white,
@@ -294,12 +304,14 @@ const styles = StyleSheet.create({
   rodRow: {
     position: "absolute",
     flexDirection: "row",
+    backgroundColor: colors.gray200
   },
   rod: {
     width: 35,
     height: ROD_HEIGHT,
-    marginHorizontal: 0.5,
-    borderRadius: 5,
+    marginHorizontal: 0.3,
+    borderRadius: 3,
+   
   },
   buttonContainer: {
     flex: 1,
