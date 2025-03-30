@@ -10,6 +10,7 @@ import NumberRod from "./NumberRod";
 import RodGame from "./NumberRod/RodGame";
 import DraggableRod from "./NumberRod/DraggableRod";
 import PointAndTell from "./NumberRod/PointAndTell";
+import FallingFlower from "./FallingFlower";
 
 
 const secondary = {
@@ -25,5 +26,6 @@ const secondary = {
   RodGame,
   DraggableRod,
   PointAndTell,
+  FallingFlower,
 };
 export default secondary;
