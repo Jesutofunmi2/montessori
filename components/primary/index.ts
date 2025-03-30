@@ -8,4 +8,6 @@ export * from './SafeAreaView';
 export * from './Header';
 export * from './CheckBox';
 export * from './ProgressiveBar';
-export * from './OnBoardingCard'
+export * from './OnBoardingCard';
+export * from './ThreeD';
+export * from './ButtonV2';

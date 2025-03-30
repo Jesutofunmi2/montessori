@@ -1,33 +1,98 @@
 import React from "react";
 import { colors } from "@/constants";
-import { View, StyleSheet, Image } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text as Tee,
+  FlatList,
+  ListRenderItem,
+  Dimensions,
+} from "react-native";
 import { Text } from "@/components";
+import OnBoardingCard from "@/components/primary/OnBoardingCard";
+import useOnBoardingLogic from "./useOnBoardingLogic";
+import { slides } from "@/constants/Slides";
+
+const { width, height } = Dimensions.get("window");
 
 const OnBoarding = () => {
-  return (
-    <View style={styles.container}>
-      <Image
-        source={require("../../../assets/images/book.gif")}
-        style={{ width: 250, height: 250 }}
-      />
-      <Text
-        text={"Nurture House Montessori"}
-        color={colors.white}
-        fontSize={48}
-        fontFamily="Fredoka-Bold"
-        textAlign="center"
-      />
+  const {
+    setCurrentIndex,
+    handleSkip,
+    flatListRef,
+  } = useOnBoardingLogic();
+  const renderItem: ListRenderItem<{
+    id: string;
+    title: string;
+    color: string;
+  }> = ({ item }) => (
+    <View style={[styles.slide, { backgroundColor: item.color }]}>
+      <View style={styles.textContainer}>
+        <Text
+          text={item.title}
+          color={colors.white}
+          fontSize={38}
+          fontFamily="Fredoka_500Medium"
+          textAlign="center"
+        />
+      </View>
+      <OnBoardingCard>
+        <Text text="" color={colors.purple500} fontSize={18} />
+      </OnBoardingCard>
     </View>
+  );
+
+  return (
+    <FlatList
+      ref={flatListRef}
+      data={slides}
+      keyExtractor={(item) => item.id}
+      renderItem={renderItem}
+      horizontal
+      pagingEnabled
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={{ width: width * slides.length }}
+      onMomentumScrollEnd={(event) => {
+        const index = Math.round(event.nativeEvent.contentOffset.x / width);
+        setCurrentIndex(index);
+        if (index === slides.length - 1) {
+          handleSkip();
+        }
+      }}
+    />
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    gap: 150,
-    backgroundColor: colors.green500,
+  slide: {
+    width,
+    height,
     justifyContent: "center",
+    gap: 30,
     alignItems: "center",
+    paddingHorizontal: 20,
+    paddingTop: 30,
+  },
+  textContainer: {
+    maxWidth: "95%",
+    alignItems: "center",
+    marginTop: 110,
+  },
+  skipButton: {
+    position: "absolute",
+    top: 40,
+    right: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#e0e0e0",
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 20,
+  },
+  skipText: {
+    color: colors.white,
+    fontSize: 14,
+    marginRight: 5,
   },
 });
 

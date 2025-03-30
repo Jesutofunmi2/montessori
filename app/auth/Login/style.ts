@@ -4,7 +4,7 @@ import { globalStyles } from '../../../assets/globalStyles';
 
  const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: colors.purple500,
+    backgroundColor: colors.white,
   },
   container: {
     backgroundColor: colors.green500,
@@ -17,27 +17,35 @@ import { globalStyles } from '../../../assets/globalStyles';
     marginTop: layout.pixelSizeVertical(40),
   },
   header: {
-    flex: 0.4,
+    flex: 0.3,
     justifyContent: 'flex-end',
     marginBottom: layout.pixelSizeVertical(20),
-    fontSize: 24,
+    fontSize: layout.fontPixel(24),
   },
   headerContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: layout.pixelSizeVertical(40),
     paddingHorizontal: globalStyles.container.paddingHorizontal,
   },
   footerText: {
-    textAlign: 'center',
-    paddingTop: layout.pixelSizeVertical(16),
-  },
-  body: {
-    flex: 0.6,
+    alignItems: "center", 
+    gap:10,
+    paddingTop: layout.pixelSizeVertical(86),
   },
   form: {
-    marginTop: layout.pixelSizeVertical(24),
+    marginTop: layout.pixelSizeVertical(20),
     flexGrow: 1,
   },
   btnWrapper: {
-    width: 350,
+    alignItems: "center",  
+    paddingTop: layout.pixelSizeVertical(10),
+    paddingHorizontal: globalStyles.container.paddingHorizontal,
+  },
+  textContainer: {
+    flex: 1,
+    alignItems: "center",
   },
 });
 

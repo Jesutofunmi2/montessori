@@ -1,31 +1,106 @@
 import React from "react";
-import { Stack, useRouter, useSegments } from "expo-router";
-import { useEffect } from "react";
-import { SplashScreen } from "expo-router";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import OnBoarding from "./auth/OnBoarding";
+import Login from "./auth/Login";
+import SplashScreen from "./auth/SplashScreen";
+import GetStarted from "./auth/GetStarted";
+import BioData from "./auth/BioData";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "../store";
+import Home from "./main/Dashboard";
+import Profile from "./main/Profile";
+import Quest from "./main/Quest";
+import LearningRod from "./main/Learning/NumberRod";
+import SubjectDetail from "./main/SubjectDetail";
+import RodGame from "@/components/secondary/Rod/RodGame";
+import RodPuzzle from "@/components/secondary/Rod/DraggableRod";
+import PointAndTell from "@/components/secondary/Rod/PointAndTell";
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootLayout() {
-  useEffect(() => {
-    SplashScreen.hideAsync();
-  }, []);
-  const router = useRouter();
-  const segments = useSegments();
- 
-  useEffect(() => {
-    if (segments[0] === undefined) {
-      //router.replace("/auth/OnBoarding");
-    }
-  }, [segments]);
   return (
-      <Stack>
-        <Stack.Screen
-          name="index"
-          options={{ headerShown: false, title: "Auth" }}
-        />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Stack.Navigator initialRouteName="SplashScreen">
+          <Stack.Screen
+            name="SplashScreen"
+            options={{ headerShown: false, title: "SplashScreen" }}
+            component={SplashScreen}
+          />
 
-        <Stack.Screen
-          name="auth/Login/index"
-          options={{ headerShown: false }}
-        />
-      </Stack>
+          <Stack.Screen
+            name="OnBoarding"
+            options={{ headerShown: false, title: "OnBoarding" }}
+            component={OnBoarding}
+          />
+
+          <Stack.Screen
+            name="GetStarted"
+            options={{ headerShown: false, title: "GetStarted" }}
+            component={GetStarted}
+          />
+
+          <Stack.Screen
+            name="Login"
+            options={{ headerShown: false, title: "Login" }}
+            component={Login}
+          />
+
+          <Stack.Screen
+            name="BioData"
+            options={{ headerShown: false, title: "BioData" }}
+            component={BioData}
+          />
+
+          <Stack.Screen
+            name="Home"
+            options={{ headerShown: false, title: "Home" }}
+            component={Home}
+          />
+
+          <Stack.Screen
+            name="Profile"
+            options={{ headerShown: false, title: "Profile" }}
+            component={Profile}
+          />
+
+          <Stack.Screen
+            name="Quest"
+            options={{ headerShown: false, title: "Quest" }}
+            component={Quest}
+          />
+
+          <Stack.Screen
+            name="LearningRod"
+            options={{ headerShown: false, title: "LearningRod" }}
+            component={LearningRod}
+          />
+
+          <Stack.Screen
+            name="RodGame"
+            options={{ headerShown: false, title: "RodGame" }}
+            component={RodGame}
+          />
+
+          <Stack.Screen
+            name="SubjectDetail"
+            options={{ headerShown: false, title: "SubjectDetail" }}
+            component={SubjectDetail}
+          />
+          <Stack.Screen
+            name="PuzzleGame"
+            options={{ headerShown: false, title: "PuzzleGame" }}
+            component={RodPuzzle}
+          />
+          <Stack.Screen
+            name="PointAndTell"
+            options={{ headerShown: false, title: "PointAndTell" }}
+            component={PointAndTell}
+          />
+        </Stack.Navigator>
+      </PersistGate>
+    </Provider>
   );
 }
