@@ -11,6 +11,7 @@ import NextIcon from "@/assets/svgs/NextIcon";
 import { rodColors } from "@/constants/Slides";
 import useDraggableRod from "./useDraggableRod";
 import React from "react";
+import FallingFlower from "../../FallingFlower";
 
 const RodPuzzle = () => {
   const {
@@ -26,6 +27,8 @@ const RodPuzzle = () => {
 
   return (
     <View style={[globalStyles.container, globalStyles.body]}>
+      {isCorrect && <FallingFlower isVisible={isCorrect} />}
+
       <LearningCard title={"Rearrange rods"} enabled={true} />
       <View style={styles.container}>
         <GestureHandlerRootView style={styles.container}>

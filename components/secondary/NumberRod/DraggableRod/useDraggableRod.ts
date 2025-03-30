@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Animated, Dimensions } from "react-native";
 import { ranges } from "@/constants/Slides";
 import { State } from "react-native-gesture-handler";
+import FallingFlower from '../../FallingFlower/index';
 
 const { width, height } = Dimensions.get("window");
 interface RodPosition {
