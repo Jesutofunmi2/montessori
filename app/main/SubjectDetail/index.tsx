@@ -20,7 +20,7 @@ const SubjectDetail = ({ route, navigation }: Props) => {
           text={subject.name}
           style={{
             fontFamily: "Fredoka_500Medium",
-            fontSize: 20,
+            fontSize: 18,
             color: colors.black,
           }}
         />

@@ -32,7 +32,7 @@ const LoaderHelper = ({ isLoading }: LoaderProps) => {
   return (
     <View style={styles.container}>
     <Animated.View style={{ transform: [{ rotate: rotateInterpolate }] }}>
-      <Svg width="50" height="50" viewBox="0 0 100 100">
+      <Svg width="35" height="35" viewBox="0 0 100 100">
         <Circle cx="50" cy="50" r="25" fill="#77D472" />
         <Circle
           cx="50"

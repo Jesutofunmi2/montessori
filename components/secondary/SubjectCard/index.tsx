@@ -19,7 +19,7 @@ type Subject = {
 const SubjectItem = ({ name, icon }: Subject) => (
     <View style={styles.subjectItem}>
       <Text style={styles.subjectText}>{name}</Text>
-      <Image source={icon} alt={name} style={{ width: 40, height: 40 }} />
+      <Image source={icon} alt={name} style={{ width: 35, height: 35 }} />
     </View>
 );
 
@@ -53,16 +53,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 12,
+    padding: 10,
     backgroundColor: colors.white,
     borderRadius: 12,
     marginBottom: 10,
     borderColor: colors.gray300,
-    borderWidth: 2,
+    borderWidth: 1,
     transform: [{ perspective: 1000 }, { rotateX: "0deg" }, { rotateY: "0deg" }],
   },
   subjectText: {
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: "Fredoka_500Medium",
   },
 });

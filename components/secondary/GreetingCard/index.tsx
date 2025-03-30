@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 15,
     backgroundColor: colors.green500,
-    padding: 20,
-    borderRadius: 15,
+    padding: 12,
+    borderRadius: 12,
     marginBottom: 20,
 
     shadowColor: "#000",
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
   greetingText: {
     color: colors.white,
-    fontSize: 20,
+    fontSize: 18,
     flex: 1,
     fontFamily: "Fredoka_500Medium",
   },
