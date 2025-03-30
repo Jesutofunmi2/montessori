@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
       textAlign: "center",
       color: colors.slate500,
       fontFamily: "Fredoka_500Medium",
-      fontSize: layout.fontPixel(38),
+      fontSize: layout.fontPixel(30),
       marginBottom: layout.pixelSizeVertical(50),
     },
     container: {

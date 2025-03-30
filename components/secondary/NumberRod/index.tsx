@@ -6,7 +6,7 @@ import { View, StyleSheet, Animated, TouchableOpacity } from "react-native";
 import LearningCard from "../LearningHeader";
 import useRod from "./useRod";
 
-const RodScreen = () => {
+const NumberRod = () => {
   const { addRod, resetRods, title, animations, count, rodColors } = useRod();
 
   return (
@@ -99,4 +99,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RodScreen;
+export default NumberRod;
