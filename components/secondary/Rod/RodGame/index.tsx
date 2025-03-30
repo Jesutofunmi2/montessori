@@ -115,9 +115,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-end",
     position: "absolute",
-    bottom: 10,
-    left: 0,
-    right: 0,
+    bottom: -15,
+    left: -10,
+    right: -10,
   },
   container: {
     flex: 1,

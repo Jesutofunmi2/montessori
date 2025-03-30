@@ -389,3 +389,9 @@ export const rodColors = [
   { main: "#FF5733", shadow: "#C0392B" },
   { main: "#3498DB", shadow: "#21618C" },
 ];
+
+export const ranges = [
+  [1, 3],
+  [4, 6],
+  [7, 10],
+];
