@@ -1,6 +1,6 @@
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { clamp } from "react-native-redash";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Animated, Dimensions } from "react-native";
 import { ranges } from "@/constants/Slides";
 import { State } from "react-native-gesture-handler";

@@ -1,4 +1,5 @@
 import { rodColors } from "@/constants/Slides";
+import { playSound } from "@/hooks/sound";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { Animated } from "react-native";
@@ -17,6 +18,7 @@ const useRod = () => {
       setAnimations(newAnimations);
       setCount(count + 1);
       setTitle(`This is Rod ${count + 1}`);
+      // playSound(count + 1);
       Animated.timing(newAnimations[count], {
         toValue: 1,
         duration: 1000,
