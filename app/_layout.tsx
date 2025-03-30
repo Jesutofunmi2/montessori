@@ -13,9 +13,9 @@ import Profile from "./main/Profile";
 import Quest from "./main/Quest";
 import LearningRod from "./main/Learning/NumberRod";
 import SubjectDetail from "./main/SubjectDetail";
-import RodGame from "@/components/secondary/Rod/RodGame";
-import RodPuzzle from "@/components/secondary/Rod/DraggableRod";
-import PointAndTell from "@/components/secondary/Rod/PointAndTell";
+import RodGame from "@/components/secondary/NumberRod/RodGame";
+import RodPuzzle from "@/components/secondary/NumberRod/DraggableRod";
+import PointAndTell from "@/components/secondary/NumberRod/PointAndTell";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

@@ -6,10 +6,10 @@ import SubjectsList from "./SubjectCard";
 import HorizontalLineWithTriangle from "./HorizontalLine";
 import CustomBottomNav from "./BottomNavigation";
 import LoaderHelper from "./LoaderHelper";
-import RodScreen from "./Rod";
-import RodGame from "./Rod/RodGame";
-import DraggableRod from "./Rod/DraggableRod";
-import PointAndTell from "./Rod/PointAndTell";
+import NumberRod from "./NumberRod";
+import RodGame from "./NumberRod/RodGame";
+import DraggableRod from "./NumberRod/DraggableRod";
+import PointAndTell from "./NumberRod/PointAndTell";
 
 
 const secondary = {
@@ -21,7 +21,7 @@ const secondary = {
   HorizontalLineWithTriangle,
   CustomBottomNav,
   LoaderHelper,
-  RodScreen,
+  NumberRod,
   RodGame,
   DraggableRod,
   PointAndTell,
