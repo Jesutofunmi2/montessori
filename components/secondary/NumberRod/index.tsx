@@ -1,10 +1,12 @@
 import { globalStyles } from "@/assets/globalStyles";
 import NextIcon from "@/assets/svgs/NextIcon";
 import ResetIcon from "@/assets/svgs/ResetIcon";
-import React from "react";
 import { View, StyleSheet, Animated, TouchableOpacity } from "react-native";
 import LearningCard from "../LearningHeader";
 import useRod from "./useRod";
+import React from "react";
+import { playSound } from "@/hooks/sound";
+
 
 const NumberRod = () => {
   const { addRod, resetRods, title, animations, count, rodColors } = useRod();
@@ -17,6 +19,7 @@ const NumberRod = () => {
         {Array.from({ length: count })
           .map((_, rowIndex) => count - rowIndex - 1)
           .map((rowIndex) => (
+            <TouchableOpacity onPress={() => playSound(rowIndex + 1)}  key={rowIndex}>
             <Animated.View
               key={rowIndex}
               style={[
@@ -45,6 +48,7 @@ const NumberRod = () => {
                 />
               ))}
             </Animated.View>
+            </TouchableOpacity>
           ))}
 
         <View style={styles.buttonContainer}>

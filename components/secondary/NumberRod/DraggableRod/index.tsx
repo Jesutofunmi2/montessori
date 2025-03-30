@@ -4,13 +4,13 @@ import {
   PanGestureHandler,
   GestureHandlerRootView,
 } from "react-native-gesture-handler";
-import React from "react";
 import LearningCard from "../../LearningHeader";
 import { colors, layout } from "@/constants";
 import { Button, Text } from "@/components/primary";
 import NextIcon from "@/assets/svgs/NextIcon";
 import { rodColors } from "@/constants/Slides";
 import useDraggableRod from "./useDraggableRod";
+import React from "react";
 
 const RodPuzzle = () => {
   const {

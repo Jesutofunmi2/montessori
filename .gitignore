@@ -34,5 +34,7 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+echo "android/" >> .gitignore
+echo "ios/" >> .gitignore
 
 app-example

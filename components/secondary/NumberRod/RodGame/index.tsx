@@ -1,11 +1,11 @@
 import { globalStyles } from "@/assets/globalStyles";
-import React, { useState, useEffect, useRef } from "react";
 import { View, TouchableOpacity, StyleSheet, Animated } from "react-native";
 import LearningCard from "../../LearningHeader";
 import { Button, Text } from "@/components/primary";
 import { colors, layout } from "@/constants";
 import useGameRod from "./useGameRod";
 import NextIcon from "@/assets/svgs/NextIcon";
+import React from "react";
 
 const RodGame = () => {
   const {

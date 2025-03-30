@@ -1,4 +1,3 @@
-import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoarding from "./auth/OnBoarding";
 import Login from "./auth/Login";
@@ -16,6 +15,7 @@ import SubjectDetail from "./main/SubjectDetail";
 import RodGame from "@/components/secondary/NumberRod/RodGame";
 import RodPuzzle from "@/components/secondary/NumberRod/DraggableRod";
 import PointAndTell from "@/components/secondary/NumberRod/PointAndTell";
+import React from "react";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
