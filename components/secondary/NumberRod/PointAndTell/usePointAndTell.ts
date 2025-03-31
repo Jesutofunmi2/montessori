@@ -1,8 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import { Animated } from "react-native";
 import { rodPoint } from "@/constants/Slides";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { playSound } from "@/hooks/sound";
 
 const usePointAndTell = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const [targetRodIndex, setTargetRodIndex] = useState(0);
   const [message, setMessage] = useState("");
   const [showAll, setShowAll] = useState(false);
@@ -17,33 +20,43 @@ const usePointAndTell = () => {
   }, [targetRodIndex]);
 
   const handleTap = (selectedIndex: number) => {
-    if (showAll) return; // Prevent interaction when all rods are shown
-
-    const correctRod = rodPoint[targetRodIndex]; // Correct rod at current step
+    if (showAll) return;
+    const correctRod = rodPoint[targetRodIndex];
 
     if (selectedIndex === targetRodIndex) {
+      playSound(targetRodIndex + 1);
       setMessage("✅ Amazing!");
       setTimeout(() => {
         if (targetRodIndex < rodPoint.length - 1) {
           setTargetRodIndex(targetRodIndex + 1);
-          setMessage("");
+          setMessage("✅ Well done! You completed the exercise.");
         } else {
           setShowAll(true);
-          setMessage("✅ Well done! You completed the exercise.");
         }
-      }, 1500);
+      }, 4000);
     } else {
       setMessage("❌ Try again!");
     }
   };
 
+  const resetRods = () => {
+    setTargetRodIndex(0);
+    setShowAll(false);
+    setMessage("");
+  };
+
+  const next = () => {
+    navigation.navigate("RodGame");
+  };
   return {
     targetRodIndex,
     message,
     handleTap,
     animations,
     showAll,
-    availableRods: [rodPoint[targetRodIndex]], // FIXED: Only show one rod at a time!
+    availableRods: [rodPoint[targetRodIndex]],
+    resetRods,
+    next,
   };
 };
 

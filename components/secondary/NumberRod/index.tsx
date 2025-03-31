@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     position: "absolute",
-    bottom: 10,
+    bottom: -10,
     left: 0,
     right: 0,
     flexDirection: "row",

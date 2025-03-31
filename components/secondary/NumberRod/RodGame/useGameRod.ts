@@ -41,7 +41,7 @@ const useGameRod = () => {
   };
 
   const check = () => {
-    navigation.navigate("PointAndTell");
+    navigation.navigate("PuzzleGame");
   };
 
   useEffect(() => {

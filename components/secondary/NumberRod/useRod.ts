@@ -1,7 +1,7 @@
 import { rodColors } from "@/constants/Slides";
 import { playSound } from "@/hooks/sound";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Animated } from "react-native";
 
 const useRod = () => {
@@ -25,14 +25,18 @@ const useRod = () => {
         useNativeDriver: true,
       }).start();
     }
-    if (count === 10) return navigation.navigate("PuzzleGame");
+    if (count === 10) return navigation.navigate("PointAndTell");
   };
 
   const resetRods = () => {
     setCount(0);
     setAnimations({});
-    setTimeout(addRod, 500);
+    setTitle("Let’s Learn Number Rods")
   };
+
+  useEffect(() => {
+    playSound(11);
+  },[])
 
   return {
     navigation,
