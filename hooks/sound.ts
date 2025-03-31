@@ -11,6 +11,7 @@ const audioFiles: { [key: number]: any } = {
   8: require("@/assets/audios/8.mp3"),
   9: require("@/assets/audios/9.mp3"),
   10: require("@/assets/audios/10.mp3"),
+  11: require("@/assets/audios/welcome.mp3"),
 };
 
 const getAudioFile = (number: number) => {
