@@ -30,7 +30,7 @@ const SubjectDetail = ({ route, navigation }: Props) => {
       <FlatList
         data={subject.topics}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <TopicCard item={item} enabled={item.id === "1"}/>}
+        renderItem={({ item }) => <TopicCard item={item} />}
         contentContainerStyle={styles.subjectsContainer}
         showsVerticalScrollIndicator={false}
       />

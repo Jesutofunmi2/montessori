@@ -9,21 +9,21 @@ interface TopicCardInterface {
     id: string;
     name: string;
     questions: string[];
+    active: boolean
   };
-  enabled: boolean; 
 }
-const TopicCard = ({ item, enabled }: TopicCardInterface) => {
+const TopicCard = ({ item }: TopicCardInterface) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <TouchableOpacity
-      style={[styles.topicItem, !enabled && styles.disabled]}
-      disabled={!enabled}
+      style={[styles.topicItem, !item.active && styles.disabled]}
+      disabled={!item.active}
       onPress={() => navigation.navigate("LearningRod")}
     >
-      <Text style={[styles.topicText, !enabled && styles.disabledText]}>
+      <Text style={[styles.topicText, !item.active && styles.disabledText]}>
         {item.name}
       </Text>
-      <LoaderHelper isLoading={!enabled} />
+      <LoaderHelper isLoading={!item.active} />
     </TouchableOpacity>
   );
 };

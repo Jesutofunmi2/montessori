@@ -1,12 +1,10 @@
-import { Text, Image, SVGIcon } from "@/components/primary";
+import { Text, Image } from "@/components/primary";
 import { colors } from "@/constants";
 import { RootState } from "@/store";
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSelector } from "react-redux";
-import HorizontalLineWithTriangle from "../HorizontalLine";
-import AppleIcon from "@/assets/svgs/AppleIcon";
 import NotificationIcon from "@/assets/svgs/NotificationIcon";
 import FireIcon from "@/assets/svgs/FireIcon";
 import SilverIcon from "@/assets/svgs/SilverIcon";

@@ -13,5 +13,5 @@ type RootStackParamList = {
     RodGame: undefined;
     PuzzleGame: undefined;
     PointAndTell: undefined;
-    SubjectDetail: { subject: { id: string; name: string; icon: any; topics: { id: string; name: string; questions: string[]; }[]; }; };
+    SubjectDetail: { subject: { id: string; name: string; icon: any; topics: { id: string; name: string; questions: string[]; active: boolean}[]; }; };
   };
