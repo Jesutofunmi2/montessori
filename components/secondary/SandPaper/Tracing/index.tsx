@@ -3,7 +3,6 @@ import { View, PanResponder, StyleSheet, Vibration, Animated } from "react-nativ
 import Svg, { Path, Circle, Text as SvgText } from "react-native-svg";
 
 const TracingScreen = () => {
-  // Define the correct tracing path (Number "1")
   const correctPath = [
     { x: 100, y: 50 },
     { x: 100, y: 100 },
@@ -50,7 +49,6 @@ const TracingScreen = () => {
       onPanResponderRelease: () => {
         isDrawing.current = false;
 
-        // Success: Change path color to green
         if (progressIndex === correctPath.length - 1) {
           Animated.timing(pathColor, {
             toValue: 1,
@@ -62,7 +60,6 @@ const TracingScreen = () => {
     })
   ).current;
 
-  // Interpolating path color based on progress (black → green)
   const strokeColor = pathColor.interpolate({
     inputRange: [0, 1],
     outputRange: ["black", "green"],
