@@ -23,6 +23,7 @@
     "@react-navigation/native-stack": "^7.2.0",
     "@react-navigation/stack": "^7.2.2",
     "@reduxjs/toolkit": "^2.6.1",
+    "@terrylinla/react-native-sketch-canvas": "^0.8.0",
     "drei": "^2.2.21",
     "expo": "~52.0.41",
     "expo-av": "~15.0.2",

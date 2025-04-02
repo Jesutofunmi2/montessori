@@ -1,4 +1,3 @@
-
 type RootStackParamList = {
     SplashScreen: undefined;
     OnBoarding: undefined;
@@ -13,5 +12,7 @@ type RootStackParamList = {
     RodGame: undefined;
     PuzzleGame: undefined;
     PointAndTell: undefined;
-    SubjectDetail: { subject: { id: string; name: string; icon: any; topics: { id: string; name: string; questions: string[]; active: boolean}[]; }; };
+    SandPaper: undefined;
+    TracingScreen: undefined;
+    SubjectDetail: { subject: { id: string; name: string; icon: any; topics: { id: string; name: string; questions: string[]; active: boolean; link: string}[]; }; };
   };

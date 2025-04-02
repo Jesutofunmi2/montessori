@@ -9,7 +9,8 @@ interface TopicCardInterface {
     id: string;
     name: string;
     questions: string[];
-    active: boolean
+    active: boolean;
+    link: string;
   };
 }
 const TopicCard = ({ item }: TopicCardInterface) => {
@@ -18,7 +19,7 @@ const TopicCard = ({ item }: TopicCardInterface) => {
     <TouchableOpacity
       style={[styles.topicItem, !item.active && styles.disabled]}
       disabled={!item.active}
-      onPress={() => navigation.navigate("LearningRod")}
+      onPress={() => item.id === "1" ?  navigation.navigate("LearningRod") : navigation.navigate("SandPaper")}
     >
       <Text style={[styles.topicText, !item.active && styles.disabledText]}>
         {item.name}
