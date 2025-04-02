@@ -152,36 +152,42 @@ export const subjects = [
         name: "Number Rods",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: true,
+        link: "SandPaper"
       },
       {
         id: "2",
         name: "Sandpaper Numbers",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: true,
+        link: "SandPaper"
       },
       {
         id: "3",
         name: "Papersand",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "4",
         name: "Practiced Shape Matching",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "5",
         name: "Tracing",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "6",
         name: "Solved a Logic Puzzle in Brain Boosters",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
     ],
   },
@@ -195,36 +201,42 @@ export const subjects = [
         name: "Explored ‘Animals Around the World",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "2",
         name: "Played ‘Sound Matching Game’ in Phonics Fun",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
     ],
   },
@@ -238,36 +250,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link:"SandPaper"
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link:"SandPaper"
       },
     ],
   },
@@ -281,36 +299,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
     ],
   },
@@ -324,36 +348,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
     ],
   },
@@ -367,36 +397,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link:"SandPaper"
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
+        link: "SandPaper"
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
+        link:"SandPaper"
       },
     ],
   },

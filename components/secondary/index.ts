@@ -11,6 +11,8 @@ import RodGame from "./NumberRod/RodGame";
 import DraggableRod from "./NumberRod/DraggableRod";
 import PointAndTell from "./NumberRod/PointAndTell";
 import FallingFlower from "./FallingFlower";
+import NumberGrid from "./SandPaper"
+import TracingScreen from "./SandPaper/Tracing"
 
 
 const secondary = {
@@ -27,5 +29,7 @@ const secondary = {
   DraggableRod,
   PointAndTell,
   FallingFlower,
+  NumberGrid,
+  TracingScreen,
 };
 export default secondary;

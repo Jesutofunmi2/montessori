@@ -16,6 +16,8 @@ import RodGame from "@/components/secondary/NumberRod/RodGame";
 import RodPuzzle from "@/components/secondary/NumberRod/DraggableRod";
 import PointAndTell from "@/components/secondary/NumberRod/PointAndTell";
 import React from "react";
+import SandPaper from "./main/Learning/SandPaper";
+import TracingScreen from "@/components/secondary/SandPaper/Tracing";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -98,6 +100,16 @@ export default function RootLayout() {
             name="PointAndTell"
             options={{ headerShown: false, title: "PointAndTell" }}
             component={PointAndTell}
+          />
+          <Stack.Screen
+            name="SandPaper"
+            options={{ headerShown: false, title: "SandPaper" }}
+            component={SandPaper}
+          />
+          <Stack.Screen
+            name="TracingScreen"
+            options={{ headerShown: false, title: "TracingScreen" }}
+            component={TracingScreen}
           />
         </Stack.Navigator>
       </PersistGate>
