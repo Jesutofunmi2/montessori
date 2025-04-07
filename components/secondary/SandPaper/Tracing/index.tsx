@@ -5,32 +5,31 @@ import {
   StyleSheet,
   Vibration,
   Animated,
-  Text,
   TouchableOpacity,
 } from "react-native";
-import Svg, { Path, Circle } from "react-native-svg";
+import Svg, { Path, Circle, Text as SvgText } from "react-native-svg";
 import LearningCard from "../../LearningHeader";
 import { globalStyles } from "@/assets/globalStyles";
 import ResetIcon from "@/assets/svgs/ResetIcon";
 import NextIcon from "@/assets/svgs/NextIcon";
-import { colors } from "@/constants";
-import { numberPaths } from "@/constants/Slides";
+import { numberData } from "@/constants/Slides";
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 const TracingScreen = () => {
-  const [currentNumber, setCurrentNumber] = useState(1);
+  const [currentNumber, setCurrentNumber] = useState(0);
   const [progressIndex, setProgressIndex] = useState(0);
   const [dotPosition, setDotPosition] = useState<{
     x: number;
     y: number;
   } | null>(null);
+  const [completed, setCompleted] = useState(false);
   const isDrawing = useRef(false);
   const pathColor = useRef(new Animated.Value(0)).current;
   const svgRef = useRef<View | null>(null);
   const [svgOffset, setSvgOffset] = useState({ x: 0, y: 0 });
 
-  const { d, points: correctPath } = numberPaths[currentNumber];
+  const { text, d, points: correctPath } = numberData[currentNumber];
 
   useEffect(() => {
     setTimeout(() => {
@@ -48,11 +47,12 @@ const TracingScreen = () => {
       onPanResponderGrant: () => {
         setProgressIndex(0);
         setDotPosition(null);
+        setCompleted(false);
         isDrawing.current = true;
         pathColor.setValue(0);
       },
       onPanResponderMove: (evt, gestureState) => {
-        if (!isDrawing.current) return;
+        if (!isDrawing.current || !correctPath) return;
 
         const { moveX, moveY } = gestureState;
         const relativeX = moveX - svgOffset.x;
@@ -63,7 +63,7 @@ const TracingScreen = () => {
 
         const distance = Math.sqrt(
           Math.pow(relativeX - nextPoint.x, 2) +
-            Math.pow(relativeY - nextPoint.y, 2)
+          Math.pow(relativeY - nextPoint.y, 2)
         );
 
         if (distance < 30) {
@@ -72,7 +72,8 @@ const TracingScreen = () => {
           setProgressIndex((prev) => {
             const nextIndex = Math.min(prev + 1, correctPath.length - 1);
 
-            if (nextIndex === correctPath.length - 1) {
+            if (nextIndex === correctPath.length - 1 && !completed) {
+              setCompleted(true);
               Vibration.vibrate(100);
               Animated.timing(pathColor, {
                 toValue: 1,
@@ -103,27 +104,36 @@ const TracingScreen = () => {
   const resetTrace = () => {
     setProgressIndex(0);
     setDotPosition(null);
+    setCompleted(false);
     pathColor.setValue(0);
   };
 
   return (
     <View style={[globalStyles.container, globalStyles.body]}>
       <LearningCard title={`Number ${currentNumber}`} enabled={true} />
+
+      {/* Reference (light gray) text number */}
       <View style={[globalStyles.rowCenter]}>
         <View style={[styles.referenceSvg]}>
           <View style={[globalStyles.rowCenter]}>
             <Svg width={"57%"} height={200}>
-              <Path
-                d={d}
-                stroke={"#000"}
-                strokeWidth={20}
-                strokeLinecap="round"
-                fill="none"
-              />
+              <SvgText
+                x="50%"
+                y="50%"
+                fontSize="120"
+                fontWeight="bold"
+                textAnchor="middle"
+                alignmentBaseline="middle"
+                fill="black"
+              >
+                {text}
+              </SvgText>
             </Svg>
           </View>
         </View>
       </View>
+
+      {/* Tracing Area */}
       <View style={[globalStyles.rowCenter]}>
         <View
           ref={svgRef}
@@ -131,31 +141,39 @@ const TracingScreen = () => {
           {...panResponder.panHandlers}
         >
           <Svg width={300} height={300} style={[styles.tracingSvg]}>
-            <AnimatedPath
-              d={d}
-              stroke={
-                progressIndex === correctPath.length - 1 ? "green" : "white"
-              }
-              strokeWidth={20}
-              strokeLinecap="round"
-              fill="none"
-            />
-            {/* Red Start Dot */}
-            {correctPath.length > 0 && (
-              <Circle
-                cx={correctPath[0].x}
-                cy={correctPath[0].y}
-                r={10}
-                fill="red"
-              />
-            )}
-            {/* Red progress dot */}
-            {dotPosition && (
-              <Circle cx={dotPosition.x} cy={dotPosition.y} r={8} fill="red" />
+            {correctPath && (
+              <>
+                <AnimatedPath
+                  d={d}
+                  stroke={
+                    progressIndex === correctPath.length - 1 ? "green" : "white"
+                  }
+                  strokeWidth={20}
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                {/* Red Start Dot */}
+                <Circle
+                  cx={correctPath[0].x}
+                  cy={correctPath[0].y}
+                  r={10}
+                  fill="red"
+                />
+                {/* Red Progress Dot */}
+                {dotPosition && (
+                  <Circle
+                    cx={dotPosition.x}
+                    cy={dotPosition.y}
+                    r={8}
+                    fill="red"
+                  />
+                )}
+              </>
             )}
           </Svg>
         </View>
       </View>
+
       {/* Buttons */}
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={resetTrace} style={styles.button}>
