@@ -152,42 +152,42 @@ export const subjects = [
         name: "Number Rods",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: true,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "2",
         name: "Sandpaper Numbers",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: true,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "3",
         name: "Papersand",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "4",
         name: "Practiced Shape Matching",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "5",
         name: "Tracing",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "6",
         name: "Solved a Logic Puzzle in Brain Boosters",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
     ],
   },
@@ -201,42 +201,42 @@ export const subjects = [
         name: "Explored ‘Animals Around the World",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "2",
         name: "Played ‘Sound Matching Game’ in Phonics Fun",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
     ],
   },
@@ -250,42 +250,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link:"SandPaper"
+        link: "SandPaper",
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link:"SandPaper"
+        link: "SandPaper",
       },
     ],
   },
@@ -299,42 +299,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
     ],
   },
@@ -348,42 +348,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
     ],
   },
@@ -397,42 +397,42 @@ export const subjects = [
         name: "Addition",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "2",
         name: "Subtraction",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "3",
         name: "Multiplication",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link:"SandPaper"
+        link: "SandPaper",
       },
       {
         id: "4",
         name: "Division",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "5",
         name: "Square Root",
         questions: ["What is 2 + 3?", "Solve: 5 + 7"],
         active: false,
-        link: "SandPaper"
+        link: "SandPaper",
       },
       {
         id: "6",
         name: "Percentage",
         questions: ["What is 9 - 4?", "Solve: 15 - 8"],
         active: false,
-        link:"SandPaper"
+        link: "SandPaper",
       },
     ],
   },
@@ -468,9 +468,17 @@ export const ranges = [
   [7, 10],
 ];
 
-export const numberPaths: Record<number, { d: string; points: { x: number; y: number }[] }> = {
+export const numberData: Record<
+  number,
+  {
+    text: string;
+    d: string;
+    points: { x: number; y: number }[];
+  }
+> = {
   1: {
-    d: 'M100 40 Q110 100 100 160',
+    text: "1",
+    d: "M100 40 Q110 100 100 160",
     points: [
       { x: 100, y: 40 },
       { x: 105, y: 80 },
@@ -479,7 +487,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   2: {
-    d: 'M50 20 Q90 0 110 40 Q120 80 80 100 Q40 120 60 160',
+    text: "2",
+    d: "M50 20 Q90 0 110 40 Q120 80 80 100 Q40 120 60 160",
     points: [
       { x: 60, y: 25 },
       { x: 90, y: 40 },
@@ -490,7 +499,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   3: {
-    d: 'M60 20 Q110 40 60 80 Q110 100 60 140',
+    text: "3",
+    d: "M60 20 Q110 40 60 80 Q110 100 60 140",
     points: [
       { x: 65, y: 30 },
       { x: 95, y: 50 },
@@ -500,7 +510,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   4: {
-    d: 'M120 20 L60 100 L120 100 L120 160',
+    text: "4",
+    d: "M120 20 L60 100 L120 100 L120 160",
     points: [
       { x: 120, y: 20 },
       { x: 90, y: 60 },
@@ -510,7 +521,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   5: {
-    d: 'M110 20 H60 V60 Q100 60 90 100 Q90 140 60 160',
+    text: "5",
+    d: "M110 20 H60 V60 Q100 60 90 100 Q90 140 60 160",
     points: [
       { x: 110, y: 20 },
       { x: 80, y: 20 },
@@ -521,7 +533,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   6: {
-    d: 'M100 20 Q60 60 90 100 Q110 130 60 160 Q30 120 60 100',
+    text: "6",
+    d: "M100 20 Q60 60 90 100 Q110 130 60 160 Q30 120 60 100",
     points: [
       { x: 95, y: 30 },
       { x: 70, y: 60 },
@@ -533,7 +546,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   7: {
-    d: 'M40 20 H120 L60 160',
+    text: "7",
+    d: "M40 20 H120 L60 160",
     points: [
       { x: 40, y: 20 },
       { x: 80, y: 20 },
@@ -543,7 +557,8 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   8: {
-    d: 'M80 60 Q40 20 80 0 Q120 20 80 60 Q120 100 80 160 Q40 100 80 60',
+    text: "8",
+    d: "M80 60 Q40 20 80 0 Q120 20 80 60 Q120 100 80 160 Q40 100 80 60",
     points: [
       { x: 80, y: 60 },
       { x: 60, y: 30 },
@@ -557,7 +572,21 @@ export const numberPaths: Record<number, { d: string; points: { x: number; y: nu
     ],
   },
   9: {
-    d: 'M90 100 Q120 80 100 40 Q60 20 60 60 Q60 100 100 100',
+    text: "9",
+    d: "M90 100 Q120 80 100 40 Q60 20 60 60 Q60 100 100 100",
+    points: [
+      { x: 90, y: 100 },
+      { x: 110, y: 80 },
+      { x: 100, y: 50 },
+      { x: 80, y: 30 },
+      { x: 60, y: 60 },
+      { x: 70, y: 90 },
+      { x: 90, y: 100 },
+    ],
+  },
+  0: {
+    text: "9",
+    d: "M90 100 Q120 80 100 40 Q60 20 60 60 Q60 100 100 100",
     points: [
       { x: 90, y: 100 },
       { x: 110, y: 80 },
