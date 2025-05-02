@@ -4,7 +4,7 @@ import Svg, { Path } from "react-native-svg";
 const MinusIcon = () => {
   return (
     <Svg
-      width="17"
+      width="15"
       height="2"
       viewBox="0 0 17 2"
       fill="none"
