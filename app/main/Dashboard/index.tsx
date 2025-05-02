@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily:"Fredoka_500Medium",
     marginBottom: 10,
+    marginTop: 10,
     color: colors.black,
   },
 });
