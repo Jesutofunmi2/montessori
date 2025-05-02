@@ -13,6 +13,7 @@ import PointAndTell from "./NumberRod/PointAndTell";
 import FallingFlower from "./FallingFlower";
 import NumberGrid from "./SandPaper"
 import TracingScreen from "./SandPaper/Tracing"
+import UnlockTooltip from "./UnlockTooltip";
 
 
 const secondary = {
@@ -31,5 +32,6 @@ const secondary = {
   FallingFlower,
   NumberGrid,
   TracingScreen,
+  UnlockTooltip,
 };
 export default secondary;
