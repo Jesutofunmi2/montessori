@@ -387,55 +387,6 @@ export const subjects = [
       },
     ],
   },
-  {
-    id: "6",
-    name: "Sensorial",
-    icon: require("@/assets/images/uranus.png"),
-    topics: [
-      {
-        id: "1",
-        name: "Addition",
-        questions: ["What is 2 + 3?", "Solve: 5 + 7"],
-        active: false,
-        link: "SandPaper",
-      },
-      {
-        id: "2",
-        name: "Subtraction",
-        questions: ["What is 9 - 4?", "Solve: 15 - 8"],
-        active: false,
-        link: "SandPaper",
-      },
-      {
-        id: "3",
-        name: "Multiplication",
-        questions: ["What is 2 + 3?", "Solve: 5 + 7"],
-        active: false,
-        link: "SandPaper",
-      },
-      {
-        id: "4",
-        name: "Division",
-        questions: ["What is 9 - 4?", "Solve: 15 - 8"],
-        active: false,
-        link: "SandPaper",
-      },
-      {
-        id: "5",
-        name: "Square Root",
-        questions: ["What is 2 + 3?", "Solve: 5 + 7"],
-        active: false,
-        link: "SandPaper",
-      },
-      {
-        id: "6",
-        name: "Percentage",
-        questions: ["What is 9 - 4?", "Solve: 15 - 8"],
-        active: false,
-        link: "SandPaper",
-      },
-    ],
-  },
 ];
 
 export const rods = [
