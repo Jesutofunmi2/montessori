@@ -42,7 +42,7 @@ const SubjectDetail = ({ route, navigation }: Props) => {
 const styles = StyleSheet.create({
   header: {
     gap: layout.pixelSizeHorizontal(10),
-    marginTop: layout.pixelSizeVertical(10),
+    marginTop: layout.pixelSizeVertical(30),
   },
   subjectsContainer: {
     paddingBottom: 0,

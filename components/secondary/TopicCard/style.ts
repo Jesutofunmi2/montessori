@@ -5,21 +5,17 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 
     topicItem: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: 8,
-        backgroundColor: colors.white,
+        padding: 13,
+        backgroundColor: "#F8F8F8",
         borderRadius: 12,
-        marginBottom: 8,
-        borderColor: colors.gray300,
+        borderColor: "#CAD4E0",
         borderWidth: 1,
         marginTop: 10,
       },
       topicText: {
-        fontSize: 16,
+        fontSize: 14,
         flexShrink: 1,
-        fontFamily: "Fredoka_400Regular",
+        fontFamily: "Fredoka_500Medium",
       },
       disabled: {
         opacity: 0.5,
@@ -27,6 +23,14 @@ const styles = StyleSheet.create({
       disabledText: {
         color: "#999",
       },
+      subItem:{
+        padding: 7,
+        backgroundColor: "#F8F8F8",
+        borderRadius: 8,
+        borderColor: "#CAD4E0",
+        borderWidth: 1,
+        marginTop: 10,
+      }
   });
   
   export default styles;

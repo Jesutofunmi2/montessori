@@ -10,3 +10,6 @@ export * from './HomeIcon';
 export * from './SoundIcon';
 export * from './NextIcon';
 export * from './ResetIcon';
+export * from './LockIcon';
+export * from './PlusIcon';
+export * from './MinusIcon';
