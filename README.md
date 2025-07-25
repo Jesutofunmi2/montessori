@@ -14,50 +14,51 @@ This project is built with [Expo](https://expo.dev) and was bootstrapped using [
    git clone https://github.com/your-username/montessori-app.git
    cd montessori-app
 
+
 ```bash  npm install
 
 ```bash  npx expo start -c 
 
 From the terminal, you can choose to:
 
-- **Open in Expo Go on your mobile device (scan QR code)
+- Open in Expo Go on your mobile device (scan QR code)
 
-- **Run on an Android emulator
+- Run on an Android emulator
 
-- **Run on an iOS simulator
+- Run on an iOS simulator
 
-- **Launch a web preview
+- Launch a web preview
 
 
 ## Features
-🧠 **Montessori Lesson Flow – Interactive, self-paced lessons designed using Montessori principles.
+🧠 Montessori Lesson Flow – Interactive, self-paced lessons designed using Montessori principles.
 
-- 🔤 **Letters & Numbers Practice – Tools for early literacy and numeracy development.
+- 🔤 Letters & Numbers Practice – Tools for early literacy and numeracy development.
 
-- 🎨 **Visual Learning Aids – Includes graphics and visual demonstrations to enhance understanding.
+- 🎨 Visual Learning Aids – Includes graphics and visual demonstrations to enhance understanding.
 
-- 📊 **Basic Progress Tracking – Helps users keep track of completed lessons.
+- 📊 Basic Progress Tracking – Helps users keep track of completed lessons.
 
 
  ## Future Enhancements
   Here are some planned features to enhance the app's experience:
 
-- 👤 **Multi-User Profiles – Support for multiple learners (families, classrooms).
+- 👤 Multi-User Profiles – Support for multiple learners (families, classrooms).
 
-- 🗂️ **Lesson Categorization – Group lessons by age range or learning goals.
+- 🗂️ Lesson Categorization – Group lessons by age range or learning goals.
 
-- 📈 **Advanced Progress Analytics – Insights into learning trends and performance.
+- 📈 Advanced Progress Analytics – Insights into learning trends and performance.
 
-- 🌍 **Multi-language Support – Expand reach through localization.
+- 🌍 Multi-language Support – Expand reach through localization.
 
-- 🏆 **Gamification – Introduce rewards, levels, and quizzes for motivation.
+- 🏆 Gamification – Introduce rewards, levels, and quizzes for motivation.
 
-- 🔊 **Audio Narration – Narrated lessons for non-readers.
+- 🔊 Audio Narration – Narrated lessons for non-readers.
 
-- ☁️ **Cloud Sync – Sync progress across multiple devices.
+- ☁️ Cloud Sync – Sync progress across multiple devices.
 
 ## Contributing
-- **Contributions are welcome! If you'd like to suggest a feature or report a bug, feel free to open an issue or submit a pull request.
+- Contributions are welcome! If you'd like to suggest a feature or report a bug, feel free to open an issue or submit a pull request.
 
 ## Learn more
 
