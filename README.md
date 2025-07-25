@@ -14,8 +14,8 @@ This project is built with [Expo](https://expo.dev) and was bootstrapped using [
    git clone https://github.com/your-username/montessori-app.git
    cd montessori-app
 
+  npm install
 
-```bash  npm install
 
 ```bash  npx expo start -c 
 
@@ -40,7 +40,7 @@ From the terminal, you can choose to:
 - 📊 Basic Progress Tracking – Helps users keep track of completed lessons.
 
 
- ## Future Enhancements
+## Future Enhancements
   Here are some planned features to enhance the app's experience:
 
 - 👤 Multi-User Profiles – Support for multiple learners (families, classrooms).
