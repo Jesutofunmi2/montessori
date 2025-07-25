@@ -11,7 +11,7 @@ This project is built with [Expo](https://expo.dev) and was bootstrapped using [
 1. **Clone the Repository**
 
    ```bash
-   git clone [https://github.com/Jesutofunmi2/montessori.git]
+   git clone https://github.com/Jesutofunmi2/montessori.git
    cd montessori-app
    
   ```bash
