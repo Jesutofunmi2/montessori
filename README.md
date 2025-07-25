@@ -16,9 +16,6 @@ This project is built with [Expo](https://expo.dev) and was bootstrapped using [
    
   ```bash
   npm install
-
-
-  ```bash
   npx expo start -c
 
 
