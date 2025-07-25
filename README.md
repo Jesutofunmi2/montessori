@@ -13,11 +13,12 @@ This project is built with [Expo](https://expo.dev) and was bootstrapped using [
    ```bash
    git clone https://github.com/your-username/montessori-app.git
    cd montessori-app
-
+   
+  ```bash
   npm install
 
-
-```bash  npx expo start -c 
+   ```bash
+   npx expo start -c 
 
 From the terminal, you can choose to:
 
